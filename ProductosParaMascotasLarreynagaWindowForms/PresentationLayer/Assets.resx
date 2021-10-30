@@ -121,20 +121,17 @@
   <data name="bienvenido_al_sistema" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\bienvenido_al_sistema.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buton_iniciar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\buton_iniciar_sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_presionado_iniciar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_presionado_iniciar_sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye_closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\eye_closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="input_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\input_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="input_pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\input_pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Input_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Input_password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Input_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Input_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="input_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\input_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="welcome_cats" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\welcome_cats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

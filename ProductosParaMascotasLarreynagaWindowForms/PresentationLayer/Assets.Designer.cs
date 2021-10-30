@@ -22,14 +22,14 @@ namespace PresentationLayer {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class LoginAssets {
+    internal class Assets {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal LoginAssets() {
+        internal Assets() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace PresentationLayer {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PresentationLayer.LoginAssets", typeof(LoginAssets).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PresentationLayer.Assets", typeof(Assets).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -73,9 +73,9 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap buton_iniciar_sesion {
+        internal static System.Drawing.Bitmap eye {
             get {
-                object obj = ResourceManager.GetObject("buton_iniciar_sesion", resourceCulture);
+                object obj = ResourceManager.GetObject("eye", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_presionado_iniciar_sesion {
+        internal static System.Drawing.Bitmap eye_closed {
             get {
-                object obj = ResourceManager.GetObject("button_presionado_iniciar_sesion", resourceCulture);
+                object obj = ResourceManager.GetObject("eye_closed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap input_background {
+        internal static System.Drawing.Bitmap input_pass {
             get {
-                object obj = ResourceManager.GetObject("input_background", resourceCulture);
+                object obj = ResourceManager.GetObject("input_pass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,19 +103,9 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Input_password {
+        internal static System.Drawing.Bitmap input_user {
             get {
-                object obj = ResourceManager.GetObject("Input_password", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Input_user {
-            get {
-                object obj = ResourceManager.GetObject("Input_user", resourceCulture);
+                object obj = ResourceManager.GetObject("input_user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
