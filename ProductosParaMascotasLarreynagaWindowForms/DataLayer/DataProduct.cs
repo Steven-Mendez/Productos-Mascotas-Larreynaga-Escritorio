@@ -1,12 +1,8 @@
 ﻿using EntityLayer;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataLayer
 {
@@ -64,7 +60,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int EditProduct(EntityProduct product)
+        public int UpdateProduct(EntityProduct product)
         {
             int rowsAffected = -1;
             using (var connection = new SqlConnection(DataConnection.ConnectionString))
