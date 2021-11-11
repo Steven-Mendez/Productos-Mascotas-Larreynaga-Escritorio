@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using static EntityLayer.EntityProduct;
 
 namespace DataLayer
 {
@@ -41,7 +42,7 @@ namespace DataLayer
                             commandText = "sp_search_product";
                             break;
                     }
-                    if (orderType == EntityOrderType.DESC)
+                    if (orderType == EntityOrderType.DESC && attribute != EntityProductAttribute.All)
                     {
                         commandText += "_desc";
                     }

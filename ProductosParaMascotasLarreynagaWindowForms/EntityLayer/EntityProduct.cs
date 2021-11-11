@@ -16,5 +16,16 @@ namespace EntityLayer
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public byte[] Image { get; set; }
+
+        public enum EntityProductAttribute
+        {
+            Id,
+            Category,
+            Name,
+            Description,
+            Price,
+            Stock,
+            All
+        }
     }
 }

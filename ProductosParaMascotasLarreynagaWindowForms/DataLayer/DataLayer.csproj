@@ -64,6 +64,7 @@
     <Compile Include="DataConnection.cs" />
     <Compile Include="DataProduct.cs" />
     <Compile Include="DataProductCategory.cs" />
+    <Compile Include="DataSupplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

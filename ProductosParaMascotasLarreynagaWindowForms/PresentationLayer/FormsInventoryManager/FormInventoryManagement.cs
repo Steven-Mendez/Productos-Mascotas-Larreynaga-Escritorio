@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static EntityLayer.EntityProduct;
+using static EntityLayer.EntityProductCategory;
 
 namespace PresentationLayer.FormsInventoryManager
 {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EntityLayer;
 using DataLayer;
 using System.Data;
+using static EntityLayer.EntityProduct;
 
 namespace BusinessLayer
 {

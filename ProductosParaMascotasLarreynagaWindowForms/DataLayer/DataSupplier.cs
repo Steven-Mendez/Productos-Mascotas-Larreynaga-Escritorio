@@ -6,35 +6,41 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static EntityLayer.EntityProductCategory;
+using static EntityLayer.EntitySupplier;
 
 namespace DataLayer
 {
-    public class DataProductCategory
+    public class DataSupplier
     {
-        public DataTable SearchProductCategory(string search, EntityProductCategoryAttribute attribute, EntityOrderType orderType)
+        public DataTable Select(string search, EntitySupplierAttribute attribute, EntityOrderType orderType)
         {
-            var productCategoryTable = new DataTable("Categorias de Producto");
+            var supplierTable = new DataTable("Proveedores");
             try
             {
-                using (SqlConnection connection = new SqlConnection(DataConnection.ConnectionString))
+                using (var connection = new SqlConnection(DataConnection.ConnectionString))
                 {
                     string commandText = null;
                     switch (attribute)
                     {
-                        case EntityProductCategoryAttribute.CategoryID:
-                            commandText = "sp_search_product_category_by_category_id";
+                        case EntitySupplierAttribute.SupplierID:
                             break;
-                        case EntityProductCategoryAttribute.Name:
-                            commandText = "sp_search_product_category_by_category_name";
+                        case EntitySupplierAttribute.MunicipalityID:
                             break;
-                        case EntityProductCategoryAttribute.All:
-                            commandText = "sp_search_product_category";
+                        case EntitySupplierAttribute.Name:
+                            break;
+                        case EntitySupplierAttribute.Addres:
+                            break;
+                        case EntitySupplierAttribute.StreetNumber:
+                            break;
+                        case EntitySupplierAttribute.StreetName:
+                            break;
+                        case EntitySupplierAttribute.All:
+                            commandText = "sp_search_supplier";
                             break;
                         default:
                             break;
                     }
-                    if (orderType == EntityOrderType.DESC && attribute != EntityProductCategoryAttribute.All)
+                    if (orderType == EntityOrderType.DESC && attribute != EntitySupplierAttribute.All)
                     {
                         commandText += "_desc";
                     }
@@ -45,18 +51,19 @@ namespace DataLayer
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
-                    new SqlDataAdapter(command).Fill(productCategoryTable);
+                    command.Parameters.Add("@search", SqlDbType.VarChar, 1000).Value = search;
+                    var adapter = new SqlDataAdapter(command);
+                    adapter.Fill(supplierTable);
                 }
             }
             catch
             {
-                return productCategoryTable;
+                return supplierTable;
             }
-            return productCategoryTable;
+            return supplierTable;
         }
 
-        public int InsertProductCategory(EntityProductCategory category)
+        public int Insert(EntitySupplier supplier)
         {
             var rowsAffected = 0;
 
@@ -67,11 +74,15 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_insert_product_categoy",
+                        CommandText = "sp_insert_supplier",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = category.Name;
+                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = supplier.MunicipalityID;
+                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = supplier.Name;
+                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = supplier.Addres;
+                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = supplier.StreetNumber;
+                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = supplier.StreetName;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -82,7 +93,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int EditProductCategory(EntityProductCategory category)
+        public int Update(EntitySupplier supplier)
         {
             var rowsAffected = 0;
             try
@@ -92,12 +103,16 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_edit_product_categoy",
+                        CommandText = "sp_edit_supplier",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@ID", SqlDbType.Int).Value = category.CategoryID;
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = category.Name;
+                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = supplier.SupplierID;
+                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = supplier.MunicipalityID;
+                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = supplier.Name;
+                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = supplier.Addres;
+                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = supplier.StreetNumber;
+                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = supplier.StreetName;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -108,7 +123,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int DeleteProductCategory(EntityProductCategory category)
+        public int Delete(EntitySupplier supplier)
         {
             var rowsAffected = 0;
             try
@@ -118,11 +133,11 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_delete_product_categoy",
+                        CommandText = "sp_delete_supplier",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@ID", SqlDbType.Int).Value = category.CategoryID;
+                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = supplier.SupplierID;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
