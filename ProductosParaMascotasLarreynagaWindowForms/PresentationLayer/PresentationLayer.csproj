@@ -157,15 +157,74 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets.Designer.cs">
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormCategoryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormCategoryManager.Designer.cs">
+      <DependentUpon>FormCategoryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormInventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormInventoryManagement.Designer.cs">
+      <DependentUpon>FormInventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormInventoryManagerOperationProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormInventoryManagerOperationProduct.Designer.cs">
+      <DependentUpon>FormInventoryManagerOperationProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Assets.resx</DependentUpon>
+      <DependentUpon>InventoryManager.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormCategoryManager.resx">
+      <DependentUpon>FormCategoryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormInventoryManagement.resx">
+      <DependentUpon>FormInventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormInventoryManagerOperationProduct.resx">
+      <DependentUpon>FormInventoryManagerOperationProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManager.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InventoryManager.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -178,9 +237,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Assets.resx">
+    <EmbeddedResource Include="Login.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Assets.Designer.cs</LastGenOutput>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Main.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -229,6 +292,159 @@
       <Project>{c1ae1129-1ed5-4d05-b880-205e47b50c89}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrome_close_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrome_minimize_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_profile_main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_icon_invertoy_manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_icon_invertoy_manager_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clarity_settings_solid_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clarity_settings_solid_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_add_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_bag_fill_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_category_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_edit_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_id_button_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_price_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_sort_ascending_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_sort_descending_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_update_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_pricealt_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_stock_ebony.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_add_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_bag_fill_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_category_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_edit_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_id_button_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_pricealt_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_sort_ascending_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_sort_descending_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_stock_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_update_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_product_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_inventory_managment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_description.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_description_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_delete_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_content_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_add_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_open_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_inventory_managment_category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_sort_descending_sage_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_sort_ascending_sage_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_update_sage_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_id_button_sage_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_category_sage_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_inventory_managment_category1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_cancel_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_add_filled_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_management_content_save_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_open_filled_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_managment_folder_delete_green.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

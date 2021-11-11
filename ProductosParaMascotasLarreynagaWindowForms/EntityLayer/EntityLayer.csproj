@@ -41,7 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityOrderType.cs" />
+    <Compile Include="EntityProductAttribute.cs" />
+    <Compile Include="EntityProductCategory.cs" />
     <Compile Include="EntityProduct.cs" />
+    <Compile Include="EntityProductCategoryAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

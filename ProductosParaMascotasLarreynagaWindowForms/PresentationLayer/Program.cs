@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using PresentationLayer.FormsInventoryManager;
+using System;
 using System.Windows.Forms;
-
 namespace PresentationLayer
 {
     static class Program
@@ -16,7 +13,8 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new FormMain());
+            //Application.Run(new FormInventoryManagerAddProduct());
         }
     }
 }

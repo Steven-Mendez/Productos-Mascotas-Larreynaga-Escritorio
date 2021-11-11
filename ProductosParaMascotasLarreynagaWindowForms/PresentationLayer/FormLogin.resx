@@ -1782,10 +1782,10 @@
   </data>
   <data name="TextBoxUser.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAYYAAAA8CAYAAABiph1CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVHhe7cNBDQAgDAQwlLDkHsy/AqQNIbRJFwAAAAAA
+        iVBORw0KGgoAAAANSUhEUgAAAYYAAAA4CAYAAAD5N19UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB5SURBVHhe7cPBCQAgDAQwJ7FwD7v/BI5W95AEsgAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAx/bJrc6oanXmAbRYIsdAm7SPAAAAAElFTkSuQmCC
+        AAAAAAAAAAAAAAAAAAAAAAAAPrFPbnVGVaszD5v0IsfbZ1OKAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="PictureBoxInputPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

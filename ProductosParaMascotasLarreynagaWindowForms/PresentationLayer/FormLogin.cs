@@ -15,7 +15,7 @@ namespace PresentationLayer
         {
             _isPasswordActivated = !_isPasswordActivated;
             TextBoxPassword.PasswordChar = _isPasswordActivated ? '●' : '\0';
-            ImageButtonShowPassword.Image = _isPasswordActivated ? Assets.eye : Assets.eye_closed;
+            ImageButtonShowPassword.Image = _isPasswordActivated ? Login.eye : Login.eye_closed;
             ToolTip.SetToolTip(ImageButtonShowPassword, _isPasswordActivated ? "Mostrar Contraseña" : "Ocultar Contraseña");
         }
 
