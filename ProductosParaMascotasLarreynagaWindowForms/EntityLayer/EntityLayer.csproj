@@ -41,10 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityCustomer.cs" />
+    <Compile Include="EntityCustomerEmail.cs" />
+    <Compile Include="EntityCustomerPhone.cs" />
+    <Compile Include="EntityEmployeePhone.cs" />
+    <Compile Include="EntityEmployeePosition.cs" />
+    <Compile Include="EntityBranchOffice.cs" />
+    <Compile Include="EntityBranchOfficePhone.cs" />
+    <Compile Include="EntityDepartment.cs" />
+    <Compile Include="EntityEmployee.cs" />
+    <Compile Include="EntityEmployeeEmail.cs" />
+    <Compile Include="EntitySale.cs" />
+    <Compile Include="EntitySaleDetail.cs" />
+    <Compile Include="EntitySupplierEmail.cs" />
+    <Compile Include="EntityMunicipality.cs" />
     <Compile Include="EntityOrderType.cs" />
+    <Compile Include="EntitySupplierPhone.cs" />
     <Compile Include="EntityProductCategory.cs" />
     <Compile Include="EntityProduct.cs" />
     <Compile Include="EntitySupplier.cs" />
+    <Compile Include="EntitySupplierDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
