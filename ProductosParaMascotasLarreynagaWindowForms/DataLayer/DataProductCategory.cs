@@ -14,7 +14,7 @@ namespace DataLayer
     {
         public DataTable SearchProductCategory(string search, EntityProductCategoryAttribute attribute, EntityOrderType orderType)
         {
-            var productCategoryTable = new DataTable("Categorias de Producto");
+            var data = new DataTable("Categorias de Producto");
             try
             {
                 using (SqlConnection connection = new SqlConnection(DataConnection.ConnectionString))
@@ -46,14 +46,14 @@ namespace DataLayer
                     };
                     connection.Open();
                     command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
-                    new SqlDataAdapter(command).Fill(productCategoryTable);
+                    new SqlDataAdapter(command).Fill(data);
                 }
             }
             catch
             {
-                return productCategoryTable;
+                return data;
             }
-            return productCategoryTable;
+            return data;
         }
 
         public int InsertProductCategory(EntityProductCategory category)

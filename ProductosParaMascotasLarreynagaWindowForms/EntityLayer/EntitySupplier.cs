@@ -8,19 +8,19 @@ namespace EntityLayer
 {
     public class EntitySupplier
     {
-        public int SupplierID { get; set; }
-        public int MunicipalityID { get; set; }
+        public int SupplierId { get; set; }
+        public int MunicipalityId { get; set; }
         public string Name { get; set; }
-        public string Addres { get; set; }
+        public string Address { get; set; }
         public int StreetNumber { get; set; }
         public string StreetName { get; set; }
 
         public enum EntitySupplierAttribute
         {
-            SupplierID,
-            MunicipalityID,
+            SupplierId,
+            MunicipalityId,
             Name,
-            Addres,
+            Address,
             StreetNumber,
             StreetName,
             All

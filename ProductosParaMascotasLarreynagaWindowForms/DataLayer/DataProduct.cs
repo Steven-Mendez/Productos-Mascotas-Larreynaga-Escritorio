@@ -11,7 +11,7 @@ namespace DataLayer
     {
         public DataTable SearchProduct(string search, EntityProductAttribute attribute, EntityOrderType orderType)
         {
-            var productTable = new DataTable("Productos");
+            var data = new DataTable("Productos");
 
             try
             {
@@ -54,14 +54,14 @@ namespace DataLayer
                     };
                     connection.Open();
                     command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
-                    new SqlDataAdapter(command).Fill(productTable);
+                    new SqlDataAdapter(command).Fill(data);
                 }
             }
             catch
             {
-                return productTable;
+                return data;
             }
-            return productTable;
+            return data;
         }
 
         public byte[] SearchProductImage(int id)

@@ -15,6 +15,7 @@ namespace EntityLayer
         public string FirstSurname { get; set; }
         public string SecondSurname { get; set; }
         public string Identification { get; set; }
+        public string Address { get; set; }
         public int StreetNumber { get; set; }
         public int StreetName { get; set; }
 
@@ -25,6 +26,7 @@ namespace EntityLayer
             FirstName,
             SecondName,
             Identification,
+            Address,
             StreetNumber,
             StreetName,
             All

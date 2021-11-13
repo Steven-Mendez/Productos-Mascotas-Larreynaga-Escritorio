@@ -6,15 +6,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static EntityLayer.EntitySupplier;
+using static EntityLayer.EntityBranchOfficePhone;
 
 namespace DataLayer
 {
-    public class DataSupplier
+    public class DataBranchOfficePhone
     {
-        public DataTable Select(string search, EntitySupplierAttribute attribute, EntityOrderType orderType)
+        public DataTable Select(string search, EntityBranchOfficePhoneAttribute attribute, EntityOrderType orderType)
         {
-            var data = new DataTable("Proveedores");
+            var data = new DataTable("Telefono Sucursal");
             try
             {
                 using (var connection = new SqlConnection(DataConnection.ConnectionString))
@@ -22,25 +22,19 @@ namespace DataLayer
                     string commandText = null;
                     switch (attribute)
                     {
-                        case EntitySupplierAttribute.SupplierId:
+                        case EntityBranchOfficePhoneAttribute.PhoneId:
                             break;
-                        case EntitySupplierAttribute.MunicipalityId:
+                        case EntityBranchOfficePhoneAttribute.BranchOfficeId:
                             break;
-                        case EntitySupplierAttribute.Name:
+                        case EntityBranchOfficePhoneAttribute.PhoneNumber:
                             break;
-                        case EntitySupplierAttribute.Address:
-                            break;
-                        case EntitySupplierAttribute.StreetNumber:
-                            break;
-                        case EntitySupplierAttribute.StreetName:
-                            break;
-                        case EntitySupplierAttribute.All:
-                            commandText = "sp_search_supplier";
+                        case EntityBranchOfficePhoneAttribute.All:
+                            commandText = "sp_search_branch_office_phone";
                             break;
                         default:
                             break;
                     }
-                    if (orderType == EntityOrderType.DESC && attribute != EntitySupplierAttribute.All)
+                    if (orderType == EntityOrderType.DESC && attribute != EntityBranchOfficePhoneAttribute.All)
                     {
                         commandText += "_desc";
                     }
@@ -51,7 +45,7 @@ namespace DataLayer
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@search", SqlDbType.VarChar, 1000).Value = search;
+                    command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
                     var adapter = new SqlDataAdapter(command);
                     adapter.Fill(data);
                 }
@@ -63,7 +57,7 @@ namespace DataLayer
             return data;
         }
 
-        public int Insert(EntitySupplier supplier)
+        public int Insert(EntityBranchOfficePhone branchOfficePhone)
         {
             var rowsAffected = 0;
 
@@ -74,15 +68,12 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_insert_supplier",
+                        CommandText = "sp_insert_branch_office_phone",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = supplier.MunicipalityId;
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = supplier.Name;
-                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = supplier.Address;
-                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = supplier.StreetNumber;
-                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = supplier.StreetName;
+                    command.Parameters.Add("@BranchOfficeId", SqlDbType.Int).Value = branchOfficePhone.BranchOfficeId;
+                    command.Parameters.Add("@PhoneNumber", SqlDbType.VarChar, 9).Value = branchOfficePhone.PhoneNumber;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -93,7 +84,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Update(EntitySupplier supplier)
+        public int Update(EntityBranchOfficePhone branchOfficePhone)
         {
             var rowsAffected = 0;
             try
@@ -103,16 +94,13 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_edit_supplier",
+                        CommandText = "sp_edit_branch_office_phone",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = supplier.SupplierId;
-                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = supplier.MunicipalityId;
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = supplier.Name;
-                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = supplier.Address;
-                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = supplier.StreetNumber;
-                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = supplier.StreetName;
+                    command.Parameters.Add("@BranchOfficePhoneId", SqlDbType.Int).Value = branchOfficePhone.PhoneId;
+                    command.Parameters.Add("@BranchOfficeId", SqlDbType.Int).Value = branchOfficePhone.BranchOfficeId;
+                    command.Parameters.Add("@PhoneNumber", SqlDbType.VarChar, 9).Value = branchOfficePhone.PhoneNumber;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -123,7 +111,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Delete(EntitySupplier supplier)
+        public int Delete(EntityBranchOfficePhone branchOfficePhone)
         {
             var rowsAffected = 0;
             try
@@ -133,11 +121,11 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_delete_supplier",
+                        CommandText = "sp_delete_branch_office_phone",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = supplier.SupplierId;
+                    command.Parameters.Add("@BranchOfficePhoneId", SqlDbType.Int).Value = branchOfficePhone.PhoneId;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
