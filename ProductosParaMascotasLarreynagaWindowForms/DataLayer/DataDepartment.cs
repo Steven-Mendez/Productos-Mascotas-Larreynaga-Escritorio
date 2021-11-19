@@ -6,15 +6,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static EntityLayer.EntitySupplier;
+using static EntityLayer.EntityDepartment;
 
 namespace DataLayer
 {
-    public class DataSupplier
+    public class DataDepartment
     {
-        public DataTable Select(string search, EntitySupplierAttribute attribute, EntityOrderType orderType)
+        public DataTable Select(string search, EntityDepartmentAttribute attribute, EntityOrderType orderType)
         {
-            var data = new DataTable("Proveedores");
+            var data = new DataTable("Departamento");
             try
             {
                 using (var connection = new SqlConnection(DataConnection.ConnectionString))
@@ -22,25 +22,17 @@ namespace DataLayer
                     string commandText = null;
                     switch (attribute)
                     {
-                        case EntitySupplierAttribute.SupplierId:
+                        case EntityDepartmentAttribute.DepartmentId:
                             break;
-                        case EntitySupplierAttribute.MunicipalityId:
+                        case EntityDepartmentAttribute.Name:
                             break;
-                        case EntitySupplierAttribute.Name:
-                            break;
-                        case EntitySupplierAttribute.Address:
-                            break;
-                        case EntitySupplierAttribute.StreetNumber:
-                            break;
-                        case EntitySupplierAttribute.StreetName:
-                            break;
-                        case EntitySupplierAttribute.All:
-                            commandText = "sp_search_supplier";
+                        case EntityDepartmentAttribute.All:
+                            commandText = "sp_search_deparment";
                             break;
                         default:
                             break;
                     }
-                    if (orderType == EntityOrderType.DESC && attribute != EntitySupplierAttribute.All)
+                    if (orderType == EntityOrderType.DESC && attribute != EntityDepartmentAttribute.All)
                     {
                         commandText += "_desc";
                     }
@@ -51,7 +43,7 @@ namespace DataLayer
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@search", SqlDbType.VarChar, 1000).Value = search;
+                    command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
                     var adapter = new SqlDataAdapter(command);
                     adapter.Fill(data);
                 }
@@ -63,7 +55,7 @@ namespace DataLayer
             return data;
         }
 
-        public int Insert(EntitySupplier entity)
+        public int Insert(EntityDepartment entity)
         {
             var rowsAffected = 0;
 
@@ -74,15 +66,11 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_insert_supplier",
+                        CommandText = "sp_insert_deparment",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = entity.MunicipalityId;
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = entity.Name;
-                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = entity.Address;
-                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = entity.StreetNumber;
-                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = entity.StreetName;
+                    command.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = entity.Name;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -93,7 +81,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Update(EntitySupplier entity)
+        public int Update(EntityDepartment entity)
         {
             var rowsAffected = 0;
             try
@@ -103,16 +91,12 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_edit_supplier",
+                        CommandText = "sp_edit_deparment",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = entity.SupplierId;
-                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = entity.MunicipalityId;
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = entity.Name;
-                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = entity.Address;
-                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = entity.StreetNumber;
-                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = entity.StreetName;
+                    command.Parameters.Add("@DepartmentId", SqlDbType.Int).Value = entity.DepartmentId;
+                    command.Parameters.Add("@Name", SqlDbType.VarChar, 30).Value = entity.Name;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -123,7 +107,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Delete(EntitySupplier entity)
+        public int Delete(EntityDepartment entity)
         {
             var rowsAffected = 0;
             try
@@ -133,11 +117,11 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_delete_supplier",
+                        CommandText = "sp_delete_deparment",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = entity.SupplierId;
+                    command.Parameters.Add("@DepartmentId", SqlDbType.Int).Value = entity.DepartmentId;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }

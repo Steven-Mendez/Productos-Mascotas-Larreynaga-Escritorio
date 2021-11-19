@@ -65,9 +65,22 @@
     <Compile Include="DataBranchOfficePhone.cs" />
     <Compile Include="DataConnection.cs" />
     <Compile Include="DataCustomer.cs" />
+    <Compile Include="DataCustomerEmail.cs" />
+    <Compile Include="DataCustomerPhone.cs" />
+    <Compile Include="DataDepartment.cs" />
+    <Compile Include="DataEmployee.cs" />
+    <Compile Include="DataEmployeeEmail.cs" />
+    <Compile Include="DataEmployeePhone.cs" />
+    <Compile Include="DataEmployeePosition.cs" />
+    <Compile Include="DataMunicipality.cs" />
     <Compile Include="DataProduct.cs" />
     <Compile Include="DataProductCategory.cs" />
+    <Compile Include="DataSale.cs" />
+    <Compile Include="DataSaleDetail.cs" />
     <Compile Include="DataSupplier.cs" />
+    <Compile Include="DataSupplierDetail.cs" />
+    <Compile Include="DataSupplierEmail.cs" />
+    <Compile Include="DataSupplierPhone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,15 +6,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static EntityLayer.EntitySupplier;
+using static EntityLayer.EntitySupplierDetail;
 
 namespace DataLayer
 {
-    public class DataSupplier
+    public class DataSupplierDetail
     {
-        public DataTable Select(string search, EntitySupplierAttribute attribute, EntityOrderType orderType)
+        public DataTable Select(string search, EntitySupplierDetailAttribute attribute, EntityOrderType orderType)
         {
-            var data = new DataTable("Proveedores");
+            var data = new DataTable("Detalles Proveedor");
             try
             {
                 using (var connection = new SqlConnection(DataConnection.ConnectionString))
@@ -22,25 +22,23 @@ namespace DataLayer
                     string commandText = null;
                     switch (attribute)
                     {
-                        case EntitySupplierAttribute.SupplierId:
+                        case EntitySupplierDetailAttribute.SupplierId:
                             break;
-                        case EntitySupplierAttribute.MunicipalityId:
+                        case EntitySupplierDetailAttribute.ProductId:
                             break;
-                        case EntitySupplierAttribute.Name:
+                        case EntitySupplierDetailAttribute.Date:
                             break;
-                        case EntitySupplierAttribute.Address:
+                        case EntitySupplierDetailAttribute.Quantity:
                             break;
-                        case EntitySupplierAttribute.StreetNumber:
+                        case EntitySupplierDetailAttribute.PurchasePrice:
                             break;
-                        case EntitySupplierAttribute.StreetName:
-                            break;
-                        case EntitySupplierAttribute.All:
-                            commandText = "sp_search_supplier";
+                        case EntitySupplierDetailAttribute.All:
+                            commandText = "sp_search_supplier_detail";
                             break;
                         default:
                             break;
                     }
-                    if (orderType == EntityOrderType.DESC && attribute != EntitySupplierAttribute.All)
+                    if (orderType == EntityOrderType.DESC && attribute != EntitySupplierDetailAttribute.All)
                     {
                         commandText += "_desc";
                     }
@@ -63,7 +61,7 @@ namespace DataLayer
             return data;
         }
 
-        public int Insert(EntitySupplier entity)
+        public int Insert(EntitySupplierDetail entity)
         {
             var rowsAffected = 0;
 
@@ -74,15 +72,15 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_insert_supplier",
+                        CommandText = "sp_insert_supplier_detail",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = entity.MunicipalityId;
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = entity.Name;
-                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = entity.Address;
-                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = entity.StreetNumber;
-                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = entity.StreetName;
+                    command.Parameters.Add("@SupplierId", SqlDbType.Int).Value = entity.SupplierId;
+                    command.Parameters.Add("@ProductId", SqlDbType.Int).Value = entity.ProductId;
+                    command.Parameters.Add("@Date", SqlDbType.DateTime).Value = entity.Date;
+                    command.Parameters.Add("@Quantity", SqlDbType.Int).Value = entity.Quantity;
+                    command.Parameters.Add("@PurcharsePrice", SqlDbType.Money).Value = entity.PurcharsePrice;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -93,7 +91,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Update(EntitySupplier entity)
+        public int Update(EntitySupplierDetail entity)
         {
             var rowsAffected = 0;
             try
@@ -103,16 +101,15 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_edit_supplier",
+                        CommandText = "sp_edit_supplier_detail",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = entity.SupplierId;
-                    command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = entity.MunicipalityId;
-                    command.Parameters.Add("@Name", SqlDbType.VarChar, 70).Value = entity.Name;
-                    command.Parameters.Add("@Addres", SqlDbType.VarChar, 200).Value = entity.Address;
-                    command.Parameters.Add("@StreetNumber", SqlDbType.Int).Value = entity.StreetNumber;
-                    command.Parameters.Add("@StreetName", SqlDbType.VarChar, 50).Value = entity.StreetName;
+                    command.Parameters.Add("@SupplierId", SqlDbType.Int).Value = entity.SupplierId;
+                    command.Parameters.Add("@ProductId", SqlDbType.Int).Value = entity.ProductId;
+                    command.Parameters.Add("@Date", SqlDbType.DateTime).Value = entity.Date;
+                    command.Parameters.Add("@Quantity", SqlDbType.Int).Value = entity.Quantity;
+                    command.Parameters.Add("@PurcharsePrice", SqlDbType.Money).Value = entity.PurcharsePrice;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -123,7 +120,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Delete(EntitySupplier entity)
+        public int Delete(EntitySupplierDetail entity)
         {
             var rowsAffected = 0;
             try
@@ -133,11 +130,13 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_delete_supplier",
+                        CommandText = "sp_delete_supplier_detail",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@SupplierID", SqlDbType.Int).Value = entity.SupplierId;
+                    command.Parameters.Add("@SupplierId", SqlDbType.Int).Value = entity.SupplierId;
+                    command.Parameters.Add("@ProductId", SqlDbType.Int).Value = entity.ProductId;
+                    command.Parameters.Add("@Date", SqlDbType.DateTime).Value = entity.Date;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }

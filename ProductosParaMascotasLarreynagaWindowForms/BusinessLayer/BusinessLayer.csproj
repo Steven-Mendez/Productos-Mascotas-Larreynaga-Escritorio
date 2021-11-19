@@ -44,9 +44,22 @@
     <Compile Include="BusinessBranchOffice.cs" />
     <Compile Include="BusinessBranchOfficePhone.cs" />
     <Compile Include="BusinessCustomer.cs" />
+    <Compile Include="BusinessCustomerEmail.cs" />
+    <Compile Include="BusinessCustomerPhone.cs" />
+    <Compile Include="BusinessDepartment.cs" />
+    <Compile Include="BusinessEmployee.cs" />
+    <Compile Include="BusinessEmployeeEmail.cs" />
+    <Compile Include="BusinessEmployeePhone.cs" />
+    <Compile Include="BusinessMunicipality.cs" />
     <Compile Include="BusinessProduct.cs" />
     <Compile Include="BusinessProductCategory.cs" />
+    <Compile Include="BusinessSale.cs" />
+    <Compile Include="BusinessSaleDetail.cs" />
     <Compile Include="BusinessSupplier.cs" />
+    <Compile Include="BusinessSupplierDetail.cs" />
+    <Compile Include="BusinessEmployeePosition.cs" />
+    <Compile Include="BusinessSupplierEmail.cs" />
+    <Compile Include="BusinessSupplierPhone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

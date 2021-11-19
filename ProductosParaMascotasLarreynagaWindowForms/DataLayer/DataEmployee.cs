@@ -1,15 +1,20 @@
 ﻿using EntityLayer;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using static EntityLayer.EntityCustomer;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static EntityLayer.EntityEmployee;
 
 namespace DataLayer
 {
-    public class DataCustomer
+    public class DataEmployee
     {
-        public DataTable Select(string search, EntityCustomerAttribute attribute, EntityOrderType orderType)
+        public DataTable Select(string search, EntityEmployeeAttribute attribute, EntityOrderType orderType)
         {
-            var data = new DataTable("Cliente");
+            var data = new DataTable("Empleado");
             try
             {
                 using (var connection = new SqlConnection(DataConnection.ConnectionString))
@@ -17,29 +22,37 @@ namespace DataLayer
                     string commandText = null;
                     switch (attribute)
                     {
-                        case EntityCustomerAttribute.CustomerId:
+                        case EntityEmployeeAttribute.EmployeeId:
                             break;
-                        case EntityCustomerAttribute.MunicipalityId:
+                        case EntityEmployeeAttribute.EmployeePositionId:
                             break;
-                        case EntityCustomerAttribute.FirstName:
+                        case EntityEmployeeAttribute.BranchOfficeId:
                             break;
-                        case EntityCustomerAttribute.SecondName:
+                        case EntityEmployeeAttribute.MunicipalityId:
                             break;
-                        case EntityCustomerAttribute.Identification:
+                        case EntityEmployeeAttribute.FirstName:
                             break;
-                        case EntityCustomerAttribute.Address:
+                        case EntityEmployeeAttribute.SecondName:
                             break;
-                        case EntityCustomerAttribute.StreetNumber:
+                        case EntityEmployeeAttribute.FirstSurname:
                             break;
-                        case EntityCustomerAttribute.StreetName:
+                        case EntityEmployeeAttribute.SecondSurname:
                             break;
-                        case EntityCustomerAttribute.All:
-                            commandText = "sp_search_customer";
+                        case EntityEmployeeAttribute.Identification:
+                            break;
+                        case EntityEmployeeAttribute.Address:
+                            break;
+                        case EntityEmployeeAttribute.StreetNumber:
+                            break;
+                        case EntityEmployeeAttribute.StreetName:
+                            break;
+                        case EntityEmployeeAttribute.All:
+                            commandText = "sp_search_employee";
                             break;
                         default:
                             break;
                     }
-                    if (orderType == EntityOrderType.DESC && attribute != EntityCustomerAttribute.All)
+                    if (orderType == EntityOrderType.DESC && attribute != EntityEmployeeAttribute.All)
                     {
                         commandText += "_desc";
                     }
@@ -62,7 +75,7 @@ namespace DataLayer
             return data;
         }
 
-        public int Insert(EntityCustomer entity)
+        public int Insert(EntityEmployee entity)
         {
             var rowsAffected = 0;
 
@@ -73,10 +86,12 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_insert_customer",
+                        CommandText = "sp_insert_employee",
                         Connection = connection
                     };
                     connection.Open();
+                    command.Parameters.Add("@EmployeePositionId", SqlDbType.Int).Value = entity.EmployeePositionId;
+                    command.Parameters.Add("@BranchOfficeId", SqlDbType.Int).Value = entity.BranchOfficeId;
                     command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = entity.MunicipalityId;
                     command.Parameters.Add("@FirstName", SqlDbType.VarChar, 50).Value = entity.FirstName;
                     command.Parameters.Add("@SecondName", SqlDbType.VarChar, 50).Value = entity.SecondName;
@@ -96,7 +111,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Update(EntityCustomer entity)
+        public int Update(EntityEmployee entity)
         {
             var rowsAffected = 0;
             try
@@ -106,11 +121,13 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_edit_customer",
+                        CommandText = "sp_edit_employee",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@CustomerId", SqlDbType.Int).Value = entity.CustomerId;
+                    command.Parameters.Add("@EmployeeId", SqlDbType.Int).Value = entity.EmployeeId;
+                    command.Parameters.Add("@EmployeePositionId", SqlDbType.Int).Value = entity.EmployeePositionId;
+                    command.Parameters.Add("@BranchOfficeId", SqlDbType.Int).Value = entity.BranchOfficeId;
                     command.Parameters.Add("@MunicipalityId", SqlDbType.Int).Value = entity.MunicipalityId;
                     command.Parameters.Add("@FirstName", SqlDbType.VarChar, 50).Value = entity.FirstName;
                     command.Parameters.Add("@SecondName", SqlDbType.VarChar, 50).Value = entity.SecondName;
@@ -130,7 +147,7 @@ namespace DataLayer
             return rowsAffected;
         }
 
-        public int Delete(EntityCustomer entity)
+        public int Delete(EntityEmployee entity)
         {
             var rowsAffected = 0;
             try
@@ -140,11 +157,11 @@ namespace DataLayer
                     var command = new SqlCommand()
                     {
                         CommandType = CommandType.StoredProcedure,
-                        CommandText = "sp_delete_customer",
+                        CommandText = "sp_delete_employee",
                         Connection = connection
                     };
                     connection.Open();
-                    command.Parameters.Add("@CustomerId", SqlDbType.Int).Value = entity.CustomerId;
+                    command.Parameters.Add("@EmployeeId", SqlDbType.Int).Value = entity.EmployeeId;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }

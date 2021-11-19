@@ -7,26 +7,26 @@ namespace BusinessLayer
 {
     public class BusinessCustomer
     {
-        private readonly DataCustomer _dataBranchOffice = new DataCustomer();
+        private readonly DataCustomer _data = new DataCustomer();
 
         public DataTable Get(string search = "", EntityCustomerAttribute attribute = EntityCustomerAttribute.All, EntityOrderType orderType = EntityOrderType.ASC)
         {
-            return _dataBranchOffice.Select(search, attribute, orderType);
+            return _data.Select(search, attribute, orderType);
         }
 
         public int Add(EntityCustomer entity)
         {
-            return _dataBranchOffice.Insert(entity);
+            return _data.Insert(entity);
         }
 
         public int Edit(EntityCustomer entity)
         {
-            return _dataBranchOffice.Update(entity);
+            return _data.Update(entity);
         }
 
         public int Delete(EntityCustomer entity)
         {
-            return _dataBranchOffice.Delete(entity);
+            return _data.Delete(entity);
         }
     }
 }

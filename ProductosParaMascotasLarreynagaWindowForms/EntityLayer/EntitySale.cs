@@ -13,7 +13,7 @@ namespace EntityLayer
         public int EmployeeId { get; set; }
         public DateTime Date { get; set; }
 
-        public enum EntitySake
+        public enum EntitySaleAttribute
         {
             SaleId,
             CustomerId,
