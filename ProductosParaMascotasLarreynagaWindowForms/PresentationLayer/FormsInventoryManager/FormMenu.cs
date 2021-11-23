@@ -20,7 +20,11 @@ namespace PresentationLayer.FormsInventoryManager
         {
             InitializeComponent();
             _buttons.Add((ButtonInventoryManager, InventoryManager.box_icon_invertoy_manager, InventoryManager.box_icon_invertoy_manager_gray));
-            _buttons.Add((ButtonAccountSettings, Properties.Resources.clarity_settings_solid_white, Properties.Resources.clarity_settings_solid_gray));
+            _buttons.Add((ButtonPointOfSale, InventoryManager.point_of_sale_white, InventoryManager.point_of_sale_gray));
+            _buttons.Add((ButtonSuppliers, InventoryManager.fluent_person_support_white, InventoryManager.fluent_person_support_gray));
+            _buttons.Add((ButtonClients, InventoryManager.people_community_white, InventoryManager.people_community_gray));
+            _buttons.Add((ButtonEmployees, InventoryManager.employee_group_white, InventoryManager.employee_group_gray));
+            _buttons.Add((ButtonSales, InventoryManager.monetization_green, InventoryManager.monetization_gray));
             _mainContainer = mainContainer;
         }
 
@@ -35,10 +39,29 @@ namespace PresentationLayer.FormsInventoryManager
             _paintSelectedButton((Button)sender);
         }
 
-        private void ButtonAccountSettings_Click(object sender, EventArgs e)
+        private void ButtonPointOfSale_Click(object sender, EventArgs e)
         {
             _paintSelectedButton((Button)sender);
+        }
 
+        private void ButtonSuppliers_Click(object sender, EventArgs e)
+        {
+            _paintSelectedButton((Button)sender);
+        }
+
+        private void ButtonClients_Click(object sender, EventArgs e)
+        {
+            _paintSelectedButton((Button)sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _paintSelectedButton((Button)sender);
+        }
+
+        private void ButtonSales_Click(object sender, EventArgs e)
+        {
+            _paintSelectedButton((Button)sender);
         }
 
         private void _paintSelectedButton(Button sender)

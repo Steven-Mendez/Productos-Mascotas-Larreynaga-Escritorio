@@ -32,17 +32,16 @@ namespace PresentationLayer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.PanelLeft = new System.Windows.Forms.Panel();
             this.PanelUserInfo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PictureBoxUser = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.PanelButtons = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
+            this.PanelContainer = new System.Windows.Forms.Panel();
             this.ImageButtonMinimize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ImageButtonClose = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.PanelContainer = new System.Windows.Forms.Panel();
+            this.PictureBoxUser = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.PanelLeft.SuspendLayout();
             this.PanelUserInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUser)).BeginInit();
             this.PanelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelLeft
@@ -59,47 +58,19 @@ namespace PresentationLayer
             // 
             // PanelUserInfo
             // 
-            this.PanelUserInfo.Controls.Add(this.label1);
             this.PanelUserInfo.Controls.Add(this.PictureBoxUser);
             this.PanelUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelUserInfo.Location = new System.Drawing.Point(0, 0);
             this.PanelUserInfo.Name = "PanelUserInfo";
-            this.PanelUserInfo.Size = new System.Drawing.Size(304, 291);
+            this.PanelUserInfo.Size = new System.Drawing.Size(304, 131);
             this.PanelUserInfo.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Mulish Light", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre Apellido";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PictureBoxUser
-            // 
-            this.PictureBoxUser.AllowFocused = false;
-            this.PictureBoxUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PictureBoxUser.AutoSizeHeight = true;
-            this.PictureBoxUser.BorderRadius = 105;
-            this.PictureBoxUser.Image = global::PresentationLayer.Main.photo_profile_main;
-            this.PictureBoxUser.IsCircle = true;
-            this.PictureBoxUser.Location = new System.Drawing.Point(47, 64);
-            this.PictureBoxUser.Name = "PictureBoxUser";
-            this.PictureBoxUser.Size = new System.Drawing.Size(210, 210);
-            this.PictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBoxUser.TabIndex = 0;
-            this.PictureBoxUser.TabStop = false;
-            this.PictureBoxUser.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // PanelButtons
             // 
             this.PanelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelButtons.Location = new System.Drawing.Point(0, 291);
+            this.PanelButtons.Location = new System.Drawing.Point(0, 131);
             this.PanelButtons.Name = "PanelButtons";
-            this.PanelButtons.Size = new System.Drawing.Size(304, 453);
+            this.PanelButtons.Size = new System.Drawing.Size(304, 613);
             this.PanelButtons.TabIndex = 0;
             // 
             // PanelTop
@@ -113,6 +84,14 @@ namespace PresentationLayer
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(1062, 38);
             this.PanelTop.TabIndex = 1;
+            // 
+            // PanelContainer
+            // 
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(304, 38);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(1062, 706);
+            this.PanelContainer.TabIndex = 2;
             // 
             // ImageButtonMinimize
             // 
@@ -128,7 +107,7 @@ namespace PresentationLayer
             this.ImageButtonMinimize.FadeWhenInactive = false;
             this.ImageButtonMinimize.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.ImageButtonMinimize.Image = global::PresentationLayer.Main.chrome_minimize_main;
-            //this.ImageButtonMinimize.ImageActive = null;
+            this.ImageButtonMinimize.ImageActive = null;
             this.ImageButtonMinimize.ImageLocation = null;
             this.ImageButtonMinimize.ImageMargin = 0;
             this.ImageButtonMinimize.ImageSize = new System.Drawing.Size(23, 23);
@@ -145,7 +124,7 @@ namespace PresentationLayer
             this.ImageButtonMinimize.TabIndex = 1;
             this.ImageButtonMinimize.ToolTipText = "";
             this.ImageButtonMinimize.WaitOnLoad = false;
-            //this.ImageButtonMinimize.Zoom = 0;
+            this.ImageButtonMinimize.Zoom = 0;
             this.ImageButtonMinimize.ZoomSpeed = 10;
             this.ImageButtonMinimize.Click += new System.EventHandler(this.ImageButtonMinimize_Click);
             // 
@@ -163,7 +142,7 @@ namespace PresentationLayer
             this.ImageButtonClose.FadeWhenInactive = false;
             this.ImageButtonClose.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.ImageButtonClose.Image = global::PresentationLayer.Main.chrome_close_main;
-            //this.ImageButtonClose.ImageActive = null;
+            this.ImageButtonClose.ImageActive = null;
             this.ImageButtonClose.ImageLocation = null;
             this.ImageButtonClose.ImageMargin = 0;
             this.ImageButtonClose.ImageSize = new System.Drawing.Size(23, 23);
@@ -180,17 +159,25 @@ namespace PresentationLayer
             this.ImageButtonClose.TabIndex = 0;
             this.ImageButtonClose.ToolTipText = "";
             this.ImageButtonClose.WaitOnLoad = false;
-            //this.ImageButtonClose.Zoom = 0;
+            this.ImageButtonClose.Zoom = 0;
             this.ImageButtonClose.ZoomSpeed = 10;
             this.ImageButtonClose.Click += new System.EventHandler(this.ImageButtonClose_Click);
             // 
-            // PanelContainer
+            // PictureBoxUser
             // 
-            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContainer.Location = new System.Drawing.Point(304, 38);
-            this.PanelContainer.Name = "PanelContainer";
-            this.PanelContainer.Size = new System.Drawing.Size(1062, 706);
-            this.PanelContainer.TabIndex = 2;
+            this.PictureBoxUser.AllowFocused = false;
+            this.PictureBoxUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PictureBoxUser.AutoSizeHeight = true;
+            this.PictureBoxUser.BorderRadius = 0;
+            this.PictureBoxUser.Image = global::PresentationLayer.Main.LOGO;
+            this.PictureBoxUser.IsCircle = true;
+            this.PictureBoxUser.Location = new System.Drawing.Point(101, 7);
+            this.PictureBoxUser.Name = "PictureBoxUser";
+            this.PictureBoxUser.Size = new System.Drawing.Size(103, 103);
+            this.PictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBoxUser.TabIndex = 0;
+            this.PictureBoxUser.TabStop = false;
+            this.PictureBoxUser.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             // 
             // FormMain
             // 
@@ -211,8 +198,8 @@ namespace PresentationLayer
             this.Text = "Productos Para Mascotas Larreynaga";
             this.PanelLeft.ResumeLayout(false);
             this.PanelUserInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUser)).EndInit();
             this.PanelTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,6 +214,5 @@ namespace PresentationLayer
         private System.Windows.Forms.Panel PanelButtons;
         private System.Windows.Forms.Panel PanelContainer;
         public Bunifu.UI.WinForms.BunifuPictureBox PictureBoxUser;
-        public System.Windows.Forms.Label label1;
     }
 }

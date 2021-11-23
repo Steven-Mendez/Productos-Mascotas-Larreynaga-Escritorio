@@ -83,6 +83,46 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap employee_group_gray {
+            get {
+                object obj = ResourceManager.GetObject("employee_group_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap employee_group_white {
+            get {
+                object obj = ResourceManager.GetObject("employee_group_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fluent_person_support_gray {
+            get {
+                object obj = ResourceManager.GetObject("fluent_person_support_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fluent_person_support_white {
+            get {
+                object obj = ResourceManager.GetObject("fluent_person_support_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap inventory_management_add_ebony {
             get {
                 object obj = ResourceManager.GetObject("inventory_management_add_ebony", resourceCulture);
@@ -476,6 +516,66 @@ namespace PresentationLayer {
         internal static System.Drawing.Bitmap inventory_managment_folder_open_filled_green {
             get {
                 object obj = ResourceManager.GetObject("inventory_managment_folder_open_filled_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap monetization_gray {
+            get {
+                object obj = ResourceManager.GetObject("monetization_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap monetization_green {
+            get {
+                object obj = ResourceManager.GetObject("monetization_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap people_community_gray {
+            get {
+                object obj = ResourceManager.GetObject("people_community_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap people_community_white {
+            get {
+                object obj = ResourceManager.GetObject("people_community_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap point_of_sale_gray {
+            get {
+                object obj = ResourceManager.GetObject("point_of_sale_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap point_of_sale_white {
+            get {
+                object obj = ResourceManager.GetObject("point_of_sale_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

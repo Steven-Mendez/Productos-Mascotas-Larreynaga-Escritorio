@@ -447,5 +447,38 @@
   <ItemGroup>
     <None Include="Resources\inventory_managment_folder_delete_green.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point_of_sale_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point_of_sale_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fluent_person_support_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fluent_person_support_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people_community_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people_community_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_group_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee_group_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monetization_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monetization_green.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
