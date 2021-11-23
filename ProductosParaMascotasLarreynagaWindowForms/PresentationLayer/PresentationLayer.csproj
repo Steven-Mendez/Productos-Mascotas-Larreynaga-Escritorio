@@ -188,6 +188,12 @@
     <Compile Include="FormsInventoryManager\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsInventoryManager\FormPointOfSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormPointOfSale.Designer.cs">
+      <DependentUpon>FormPointOfSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryManager.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormPointOfSale.resx">
+      <DependentUpon>FormPointOfSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManager.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -479,6 +488,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\monetization_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perro_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perro_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gato_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gato_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conejo_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conejo_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ave_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ave_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bone_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bone_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rope_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rope_green.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

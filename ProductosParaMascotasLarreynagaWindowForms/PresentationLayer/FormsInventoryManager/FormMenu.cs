@@ -41,6 +41,8 @@ namespace PresentationLayer.FormsInventoryManager
 
         private void ButtonPointOfSale_Click(object sender, EventArgs e)
         {
+            _openFormInPanel(new FormPointOfSale(), _mainContainer);
+
             _paintSelectedButton((Button)sender);
         }
 

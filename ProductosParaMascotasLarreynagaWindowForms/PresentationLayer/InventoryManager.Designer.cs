@@ -63,6 +63,56 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap all {
+            get {
+                object obj = ResourceManager.GetObject("all", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ave_black {
+            get {
+                object obj = ResourceManager.GetObject("Ave_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ave_green {
+            get {
+                object obj = ResourceManager.GetObject("Ave_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bone_black {
+            get {
+                object obj = ResourceManager.GetObject("bone_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bone_green {
+            get {
+                object obj = ResourceManager.GetObject("bone_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap box_icon_invertoy_manager {
             get {
                 object obj = ResourceManager.GetObject("box_icon_invertoy_manager", resourceCulture);
@@ -76,6 +126,26 @@ namespace PresentationLayer {
         internal static System.Drawing.Bitmap box_icon_invertoy_manager_gray {
             get {
                 object obj = ResourceManager.GetObject("box_icon_invertoy_manager_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conejo_black {
+            get {
+                object obj = ResourceManager.GetObject("Conejo_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Conejo_green {
+            get {
+                object obj = ResourceManager.GetObject("Conejo_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +186,46 @@ namespace PresentationLayer {
         internal static System.Drawing.Bitmap fluent_person_support_white {
             get {
                 object obj = ResourceManager.GetObject("fluent_person_support_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap food_black {
+            get {
+                object obj = ResourceManager.GetObject("food_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap food_green {
+            get {
+                object obj = ResourceManager.GetObject("food_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gato_black {
+            get {
+                object obj = ResourceManager.GetObject("Gato_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gato_green {
+            get {
+                object obj = ResourceManager.GetObject("Gato_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,6 +673,26 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Perro_black {
+            get {
+                object obj = ResourceManager.GetObject("Perro_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Perro_Green {
+            get {
+                object obj = ResourceManager.GetObject("Perro_Green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap point_of_sale_gray {
             get {
                 object obj = ResourceManager.GetObject("point_of_sale_gray", resourceCulture);
@@ -576,6 +706,26 @@ namespace PresentationLayer {
         internal static System.Drawing.Bitmap point_of_sale_white {
             get {
                 object obj = ResourceManager.GetObject("point_of_sale_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rope_black {
+            get {
+                object obj = ResourceManager.GetObject("rope_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rope_green {
+            get {
+                object obj = ResourceManager.GetObject("rope_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
