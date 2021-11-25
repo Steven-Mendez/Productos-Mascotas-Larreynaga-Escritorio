@@ -9,6 +9,73 @@ namespace DataLayer
 {
     public class DataProduct
     {
+        public List<EntityProduct> ListProduct(string search, EntityProductAttribute attribute = EntityProductAttribute.All, EntityOrderType orderType = EntityOrderType.ASC)
+        {
+            var data = new List<EntityProduct>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(DataConnection.ConnectionString))
+                {
+                    string commandText = null;
+                    switch (attribute)
+                    {
+                        case EntityProductAttribute.Id:
+                            commandText = "sp_search_product_by_product_id";
+                            break;
+                        case EntityProductAttribute.Category:
+                            commandText = "sp_search_product_by_category";
+                            break;
+                        case EntityProductAttribute.Name:
+                            commandText = "sp_search_product_by_name";
+                            break;
+                        case EntityProductAttribute.Description:
+                            commandText = "sp_search_product_by_description";
+                            break;
+                        case EntityProductAttribute.Price:
+                            commandText = "sp_search_product_by_price";
+                            break;
+                        case EntityProductAttribute.Stock:
+                            commandText = "sp_search_product_by_stock";
+                            break;
+                        case EntityProductAttribute.All:
+                            commandText = "sp_search_product";
+                            break;
+                    }
+                    if (orderType == EntityOrderType.DESC && attribute != EntityProductAttribute.All)
+                    {
+                        commandText += "_desc";
+                    }
+                    var command = new SqlCommand()
+                    {
+                        CommandType = CommandType.StoredProcedure,
+                        CommandText = commandText,
+                        Connection = connection
+                    };
+                    connection.Open();
+                    command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        data.Add(new EntityProduct()
+                        {
+                            ProductID = Convert.ToInt32(reader[0]),
+                            CategoryID = Convert.ToInt32(new DataProductCategory().SearchProductCategory(reader[1].ToString(), EntityProductCategory.EntityProductCategoryAttribute.Name, EntityOrderType.ASC).Rows[0][0]),
+                            Name = Convert.ToString(reader[2]),
+                            Description = Convert.ToString(reader[3]),
+                            Price = Convert.ToDecimal(reader[4]),
+                            Stock = Convert.ToInt32(reader[5])
+                        });
+                    }
+                }
+            }
+            catch
+            {
+                return data;
+            }
+            return data;
+        }
+
         public DataTable SearchProduct(string search, EntityProductAttribute attribute, EntityOrderType orderType)
         {
             var data = new DataTable("Productos");

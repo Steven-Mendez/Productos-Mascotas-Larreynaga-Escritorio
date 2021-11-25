@@ -133,6 +133,16 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap combis_adulto_mejor_alimento_ {
+            get {
+                object obj = ResourceManager.GetObject("combis_adulto_mejor_alimento_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Conejo_black {
             get {
                 object obj = ResourceManager.GetObject("Conejo_black", resourceCulture);
@@ -706,6 +716,26 @@ namespace PresentationLayer {
         internal static System.Drawing.Bitmap point_of_sale_white {
             get {
                 object obj = ResourceManager.GetObject("point_of_sale_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap product_card {
+            get {
+                object obj = ResourceManager.GetObject("product_card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap product_card1 {
+            get {
+                object obj = ResourceManager.GetObject("product_card1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

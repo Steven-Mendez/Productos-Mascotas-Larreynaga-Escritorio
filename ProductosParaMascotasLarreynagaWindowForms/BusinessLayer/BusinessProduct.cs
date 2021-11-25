@@ -14,6 +14,11 @@ namespace BusinessLayer
     {
         private readonly DataProduct _DataProduct = new DataProduct();
 
+        public List<EntityProduct> List(string search, EntityProductAttribute atribute, EntityOrderType orderType)
+        {
+            return _DataProduct.ListProduct(search, atribute, orderType);
+        }
+
         public DataTable Get(string search, EntityProductAttribute atribute, EntityOrderType orderType)
         {
             return _DataProduct.SearchProduct(search, atribute, orderType);

@@ -121,6 +121,9 @@
   <data name="fluent_person_support_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\fluent_person_support_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="product_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\product_card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search_inventory_managment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\search_inventory_managment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,6 +141,9 @@
   </data>
   <data name="inventory_management_category_sage_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_category_sage_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rope_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\rope_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inventory_management_category_ebony" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_category_ebony.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +202,9 @@
   <data name="inventory_management_category_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_category_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="combis_adulto_mejor_alimento_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\combis_adulto_mejor_alimento_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="inventory_management_content_save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_content_save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -231,6 +240,9 @@
   </data>
   <data name="employee_group_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\employee_group_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rope_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\rope_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Perro_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Perro_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,10 +334,7 @@
   <data name="inventory_managment_folder_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_managment_folder_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rope_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\rope_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rope_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\rope_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="product_card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\product_card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

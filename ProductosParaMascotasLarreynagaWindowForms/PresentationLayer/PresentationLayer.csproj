@@ -194,6 +194,12 @@
     <Compile Include="FormsInventoryManager\FormPointOfSale.Designer.cs">
       <DependentUpon>FormPointOfSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsInventoryManager\ProductButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\ProductButton.Designer.cs">
+      <DependentUpon>ProductButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryManager.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormPointOfSale.resx">
       <DependentUpon>FormPointOfSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\ProductButton.resx">
+      <DependentUpon>ProductButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManager.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -533,6 +542,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rope_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combis_adulto_mejor_alimento_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_card1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
