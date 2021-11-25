@@ -154,5 +154,10 @@ namespace PresentationLayer.FormsInventoryManager
                     e.Handled = true;
             }
         }
+
+        private void FormInventoryManagerOperationProduct_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

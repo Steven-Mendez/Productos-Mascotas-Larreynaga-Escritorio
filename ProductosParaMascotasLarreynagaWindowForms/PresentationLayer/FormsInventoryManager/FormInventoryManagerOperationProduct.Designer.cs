@@ -50,18 +50,18 @@ namespace PresentationLayer.FormsInventoryManager
             this.DragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.PanelContent = new System.Windows.Forms.Panel();
             this.ButtonSave = new System.Windows.Forms.Button();
+            this.TextBoxDescription = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.TextBoxPrice = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.TextBoxName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.DropdownCategory = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.TextBoxID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.LabelDescription = new System.Windows.Forms.Label();
             this.LabelCategory = new System.Windows.Forms.Label();
             this.LabelPrice = new System.Windows.Forms.Label();
             this.LabelName = new System.Windows.Forms.Label();
             this.LabelID = new System.Windows.Forms.Label();
-            this.ToolTip = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.TextBoxDescription = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.TextBoxPrice = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.TextBoxName = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.TextBoxID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.PictureBoxProduct = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.ToolTip = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.PanelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProduct)).BeginInit();
             this.SuspendLayout();
@@ -115,153 +115,6 @@ namespace PresentationLayer.FormsInventoryManager
             this.ToolTip.SetToolTipTitle(this.ButtonSave, "");
             this.ButtonSave.UseVisualStyleBackColor = false;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
-            // 
-            // DropdownCategory
-            // 
-            this.DropdownCategory.BackColor = System.Drawing.Color.Transparent;
-            this.DropdownCategory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
-            this.DropdownCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
-            this.DropdownCategory.BorderRadius = 4;
-            this.DropdownCategory.Color = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
-            this.DropdownCategory.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.DropdownCategory.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
-            this.DropdownCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
-            this.DropdownCategory.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
-            this.DropdownCategory.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DropdownCategory.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.DropdownCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.DropdownCategory.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.DropdownCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DropdownCategory.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.DropdownCategory.FillDropDown = true;
-            this.DropdownCategory.FillIndicator = false;
-            this.DropdownCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DropdownCategory.Font = new System.Drawing.Font("Mulish", 14.25F);
-            this.DropdownCategory.ForeColor = System.Drawing.Color.White;
-            this.DropdownCategory.FormattingEnabled = true;
-            this.DropdownCategory.Icon = null;
-            this.DropdownCategory.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.DropdownCategory.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.DropdownCategory.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.DropdownCategory.IndicatorThickness = 2;
-            this.DropdownCategory.IsDropdownOpened = false;
-            this.DropdownCategory.ItemBackColor = System.Drawing.Color.White;
-            this.DropdownCategory.ItemBorderColor = System.Drawing.Color.White;
-            this.DropdownCategory.ItemForeColor = System.Drawing.Color.Black;
-            this.DropdownCategory.ItemHeight = 34;
-            this.DropdownCategory.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.DropdownCategory.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.DropdownCategory.ItemTopMargin = 3;
-            this.DropdownCategory.Location = new System.Drawing.Point(528, 33);
-            this.DropdownCategory.Name = "DropdownCategory";
-            this.DropdownCategory.Size = new System.Drawing.Size(260, 40);
-            this.DropdownCategory.TabIndex = 3;
-            this.DropdownCategory.Text = null;
-            this.DropdownCategory.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.DropdownCategory.TextLeftMargin = 5;
-            this.ToolTip.SetToolTip(this.DropdownCategory, "");
-            this.ToolTip.SetToolTipIcon(this.DropdownCategory, null);
-            this.ToolTip.SetToolTipTitle(this.DropdownCategory, "");
-            // 
-            // LabelDescription
-            // 
-            this.LabelDescription.AutoSize = true;
-            this.LabelDescription.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDescription.Location = new System.Drawing.Point(245, 150);
-            this.LabelDescription.Name = "LabelDescription";
-            this.LabelDescription.Size = new System.Drawing.Size(97, 22);
-            this.LabelDescription.TabIndex = 10;
-            this.LabelDescription.Text = "Descripción";
-            this.ToolTip.SetToolTip(this.LabelDescription, "");
-            this.ToolTip.SetToolTipIcon(this.LabelDescription, null);
-            this.ToolTip.SetToolTipTitle(this.LabelDescription, "");
-            // 
-            // LabelCategory
-            // 
-            this.LabelCategory.AutoSize = true;
-            this.LabelCategory.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCategory.Location = new System.Drawing.Point(524, 8);
-            this.LabelCategory.Name = "LabelCategory";
-            this.LabelCategory.Size = new System.Drawing.Size(85, 22);
-            this.LabelCategory.TabIndex = 8;
-            this.LabelCategory.Text = "Categoría";
-            this.ToolTip.SetToolTip(this.LabelCategory, "");
-            this.ToolTip.SetToolTipIcon(this.LabelCategory, null);
-            this.ToolTip.SetToolTipTitle(this.LabelCategory, "");
-            // 
-            // LabelPrice
-            // 
-            this.LabelPrice.AutoSize = true;
-            this.LabelPrice.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPrice.Location = new System.Drawing.Point(524, 76);
-            this.LabelPrice.Name = "LabelPrice";
-            this.LabelPrice.Size = new System.Drawing.Size(56, 22);
-            this.LabelPrice.TabIndex = 8;
-            this.LabelPrice.Text = "Precio";
-            this.ToolTip.SetToolTip(this.LabelPrice, "");
-            this.ToolTip.SetToolTipIcon(this.LabelPrice, null);
-            this.ToolTip.SetToolTipTitle(this.LabelPrice, "");
-            // 
-            // LabelName
-            // 
-            this.LabelName.AutoSize = true;
-            this.LabelName.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelName.Location = new System.Drawing.Point(245, 76);
-            this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(70, 22);
-            this.LabelName.TabIndex = 8;
-            this.LabelName.Text = "Nombre";
-            this.ToolTip.SetToolTip(this.LabelName, "");
-            this.ToolTip.SetToolTipIcon(this.LabelName, null);
-            this.ToolTip.SetToolTipTitle(this.LabelName, "");
-            // 
-            // LabelID
-            // 
-            this.LabelID.AutoSize = true;
-            this.LabelID.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelID.Location = new System.Drawing.Point(245, 8);
-            this.LabelID.Name = "LabelID";
-            this.LabelID.Size = new System.Drawing.Size(26, 22);
-            this.LabelID.TabIndex = 8;
-            this.LabelID.Text = "ID";
-            this.ToolTip.SetToolTip(this.LabelID, "");
-            this.ToolTip.SetToolTipIcon(this.LabelID, null);
-            this.ToolTip.SetToolTipTitle(this.LabelID, "");
-            // 
-            // ToolTip
-            // 
-            this.ToolTip.Active = true;
-            this.ToolTip.AlignTextWithTitle = false;
-            this.ToolTip.AllowAutoClose = false;
-            this.ToolTip.AllowFading = true;
-            this.ToolTip.AutoCloseDuration = 5000;
-            this.ToolTip.BackColor = System.Drawing.SystemColors.Control;
-            this.ToolTip.BorderColor = System.Drawing.Color.Gainsboro;
-            this.ToolTip.ClickToShowDisplayControl = false;
-            this.ToolTip.ConvertNewlinesToBreakTags = true;
-            this.ToolTip.DisplayControl = null;
-            this.ToolTip.EntryAnimationSpeed = 350;
-            this.ToolTip.ExitAnimationSpeed = 200;
-            this.ToolTip.GenerateAutoCloseDuration = false;
-            this.ToolTip.IconMargin = 6;
-            this.ToolTip.InitialDelay = 0;
-            this.ToolTip.Name = "ToolTip";
-            this.ToolTip.Opacity = 1D;
-            this.ToolTip.OverrideToolTipTitles = false;
-            this.ToolTip.Padding = new System.Windows.Forms.Padding(10);
-            this.ToolTip.ReshowDelay = 100;
-            this.ToolTip.ShowAlways = true;
-            this.ToolTip.ShowBorders = false;
-            this.ToolTip.ShowIcons = true;
-            this.ToolTip.ShowShadows = true;
-            this.ToolTip.Tag = null;
-            this.ToolTip.TextFont = new System.Drawing.Font("Segoe UI", 9F);
-            this.ToolTip.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ToolTip.TextMargin = 2;
-            this.ToolTip.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.ToolTip.TitleForeColor = System.Drawing.Color.Black;
-            this.ToolTip.ToolTipPosition = new System.Drawing.Point(0, 0);
-            this.ToolTip.ToolTipTitle = null;
             // 
             // TextBoxDescription
             // 
@@ -501,6 +354,53 @@ namespace PresentationLayer.FormsInventoryManager
             this.TextBoxName.UseSystemPasswordChar = false;
             this.TextBoxName.WordWrap = true;
             // 
+            // DropdownCategory
+            // 
+            this.DropdownCategory.BackColor = System.Drawing.Color.Transparent;
+            this.DropdownCategory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
+            this.DropdownCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
+            this.DropdownCategory.BorderRadius = 4;
+            this.DropdownCategory.Color = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
+            this.DropdownCategory.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.DropdownCategory.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
+            this.DropdownCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
+            this.DropdownCategory.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(39)))), ((int)(((byte)(34)))));
+            this.DropdownCategory.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DropdownCategory.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropdownCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DropdownCategory.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.DropdownCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DropdownCategory.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropdownCategory.FillDropDown = true;
+            this.DropdownCategory.FillIndicator = false;
+            this.DropdownCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DropdownCategory.Font = new System.Drawing.Font("Mulish", 14.25F);
+            this.DropdownCategory.ForeColor = System.Drawing.Color.White;
+            this.DropdownCategory.FormattingEnabled = true;
+            this.DropdownCategory.Icon = null;
+            this.DropdownCategory.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropdownCategory.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropdownCategory.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropdownCategory.IndicatorThickness = 2;
+            this.DropdownCategory.IsDropdownOpened = false;
+            this.DropdownCategory.ItemBackColor = System.Drawing.Color.White;
+            this.DropdownCategory.ItemBorderColor = System.Drawing.Color.White;
+            this.DropdownCategory.ItemForeColor = System.Drawing.Color.Black;
+            this.DropdownCategory.ItemHeight = 34;
+            this.DropdownCategory.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.DropdownCategory.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.DropdownCategory.ItemTopMargin = 3;
+            this.DropdownCategory.Location = new System.Drawing.Point(528, 33);
+            this.DropdownCategory.Name = "DropdownCategory";
+            this.DropdownCategory.Size = new System.Drawing.Size(260, 40);
+            this.DropdownCategory.TabIndex = 3;
+            this.DropdownCategory.Text = null;
+            this.DropdownCategory.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropdownCategory.TextLeftMargin = 5;
+            this.ToolTip.SetToolTip(this.DropdownCategory, "");
+            this.ToolTip.SetToolTipIcon(this.DropdownCategory, null);
+            this.ToolTip.SetToolTipTitle(this.DropdownCategory, "");
+            // 
             // TextBoxID
             // 
             this.TextBoxID.AcceptsReturn = false;
@@ -580,6 +480,71 @@ namespace PresentationLayer.FormsInventoryManager
             this.TextBoxID.UseSystemPasswordChar = false;
             this.TextBoxID.WordWrap = true;
             // 
+            // LabelDescription
+            // 
+            this.LabelDescription.AutoSize = true;
+            this.LabelDescription.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDescription.Location = new System.Drawing.Point(245, 150);
+            this.LabelDescription.Name = "LabelDescription";
+            this.LabelDescription.Size = new System.Drawing.Size(97, 22);
+            this.LabelDescription.TabIndex = 10;
+            this.LabelDescription.Text = "Descripción";
+            this.ToolTip.SetToolTip(this.LabelDescription, "");
+            this.ToolTip.SetToolTipIcon(this.LabelDescription, null);
+            this.ToolTip.SetToolTipTitle(this.LabelDescription, "");
+            // 
+            // LabelCategory
+            // 
+            this.LabelCategory.AutoSize = true;
+            this.LabelCategory.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCategory.Location = new System.Drawing.Point(524, 8);
+            this.LabelCategory.Name = "LabelCategory";
+            this.LabelCategory.Size = new System.Drawing.Size(85, 22);
+            this.LabelCategory.TabIndex = 8;
+            this.LabelCategory.Text = "Categoría";
+            this.ToolTip.SetToolTip(this.LabelCategory, "");
+            this.ToolTip.SetToolTipIcon(this.LabelCategory, null);
+            this.ToolTip.SetToolTipTitle(this.LabelCategory, "");
+            // 
+            // LabelPrice
+            // 
+            this.LabelPrice.AutoSize = true;
+            this.LabelPrice.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPrice.Location = new System.Drawing.Point(524, 76);
+            this.LabelPrice.Name = "LabelPrice";
+            this.LabelPrice.Size = new System.Drawing.Size(56, 22);
+            this.LabelPrice.TabIndex = 8;
+            this.LabelPrice.Text = "Precio";
+            this.ToolTip.SetToolTip(this.LabelPrice, "");
+            this.ToolTip.SetToolTipIcon(this.LabelPrice, null);
+            this.ToolTip.SetToolTipTitle(this.LabelPrice, "");
+            // 
+            // LabelName
+            // 
+            this.LabelName.AutoSize = true;
+            this.LabelName.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelName.Location = new System.Drawing.Point(245, 76);
+            this.LabelName.Name = "LabelName";
+            this.LabelName.Size = new System.Drawing.Size(70, 22);
+            this.LabelName.TabIndex = 8;
+            this.LabelName.Text = "Nombre";
+            this.ToolTip.SetToolTip(this.LabelName, "");
+            this.ToolTip.SetToolTipIcon(this.LabelName, null);
+            this.ToolTip.SetToolTipTitle(this.LabelName, "");
+            // 
+            // LabelID
+            // 
+            this.LabelID.AutoSize = true;
+            this.LabelID.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelID.Location = new System.Drawing.Point(245, 8);
+            this.LabelID.Name = "LabelID";
+            this.LabelID.Size = new System.Drawing.Size(26, 22);
+            this.LabelID.TabIndex = 8;
+            this.LabelID.Text = "ID";
+            this.ToolTip.SetToolTip(this.LabelID, "");
+            this.ToolTip.SetToolTipIcon(this.LabelID, null);
+            this.ToolTip.SetToolTipTitle(this.LabelID, "");
+            // 
             // PictureBoxProduct
             // 
             this.PictureBoxProduct.AllowFocused = false;
@@ -600,6 +565,41 @@ namespace PresentationLayer.FormsInventoryManager
             this.PictureBoxProduct.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
             this.PictureBoxProduct.Click += new System.EventHandler(this.PictureBoxProduct_Click);
             // 
+            // ToolTip
+            // 
+            this.ToolTip.Active = true;
+            this.ToolTip.AlignTextWithTitle = false;
+            this.ToolTip.AllowAutoClose = false;
+            this.ToolTip.AllowFading = true;
+            this.ToolTip.AutoCloseDuration = 5000;
+            this.ToolTip.BackColor = System.Drawing.SystemColors.Control;
+            this.ToolTip.BorderColor = System.Drawing.Color.Gainsboro;
+            this.ToolTip.ClickToShowDisplayControl = false;
+            this.ToolTip.ConvertNewlinesToBreakTags = true;
+            this.ToolTip.DisplayControl = null;
+            this.ToolTip.EntryAnimationSpeed = 350;
+            this.ToolTip.ExitAnimationSpeed = 200;
+            this.ToolTip.GenerateAutoCloseDuration = false;
+            this.ToolTip.IconMargin = 6;
+            this.ToolTip.InitialDelay = 0;
+            this.ToolTip.Name = "ToolTip";
+            this.ToolTip.Opacity = 1D;
+            this.ToolTip.OverrideToolTipTitles = false;
+            this.ToolTip.Padding = new System.Windows.Forms.Padding(10);
+            this.ToolTip.ReshowDelay = 100;
+            this.ToolTip.ShowAlways = true;
+            this.ToolTip.ShowBorders = false;
+            this.ToolTip.ShowIcons = true;
+            this.ToolTip.ShowShadows = true;
+            this.ToolTip.Tag = null;
+            this.ToolTip.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.ToolTip.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ToolTip.TextMargin = 2;
+            this.ToolTip.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.ToolTip.TitleForeColor = System.Drawing.Color.Black;
+            this.ToolTip.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.ToolTip.ToolTipTitle = null;
+            // 
             // FormInventoryManagerOperationProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -617,6 +617,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.FormInventoryManagerOperationProduct_Load);
             this.PanelContent.ResumeLayout(false);
             this.PanelContent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProduct)).EndInit();

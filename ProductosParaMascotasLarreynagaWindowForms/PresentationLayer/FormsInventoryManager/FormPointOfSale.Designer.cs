@@ -29,24 +29,23 @@ namespace PresentationLayer.FormsInventoryManager
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPointOfSale));
             this.PanelSide = new System.Windows.Forms.Panel();
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.PanelMoney = new System.Windows.Forms.Panel();
             this.LabelTotalMoney = new System.Windows.Forms.Label();
-            this.LabelSubTotalMoney = new System.Windows.Forms.Label();
             this.LabelTotalText = new System.Windows.Forms.Label();
-            this.LabelSubtotalText = new System.Windows.Forms.Label();
             this.ButtonBill = new System.Windows.Forms.Button();
             this.ButtonClearAll = new System.Windows.Forms.Button();
             this.ButtonClearOne = new System.Windows.Forms.Button();
-            this.DataGridViewCar = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewBill = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelTop = new System.Windows.Forms.Panel();
             this.TextBoxSearch = new System.Windows.Forms.TextBox();
             this.ImageButtonToys = new Bunifu.UI.WinForms.BunifuImageButton();
@@ -61,7 +60,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.FlowPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.PanelSide.SuspendLayout();
             this.PanelMoney.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewBill)).BeginInit();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSearch)).BeginInit();
             this.SuspendLayout();
@@ -72,11 +71,10 @@ namespace PresentationLayer.FormsInventoryManager
             this.PanelSide.Controls.Add(this.ButtonCancel);
             this.PanelSide.Controls.Add(this.PanelMoney);
             this.PanelSide.Controls.Add(this.LabelTotalText);
-            this.PanelSide.Controls.Add(this.LabelSubtotalText);
             this.PanelSide.Controls.Add(this.ButtonBill);
             this.PanelSide.Controls.Add(this.ButtonClearAll);
             this.PanelSide.Controls.Add(this.ButtonClearOne);
-            this.PanelSide.Controls.Add(this.DataGridViewCar);
+            this.PanelSide.Controls.Add(this.DataGridViewBill);
             this.PanelSide.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanelSide.Location = new System.Drawing.Point(752, 0);
             this.PanelSide.Name = "PanelSide";
@@ -96,12 +94,12 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonCancel.TabIndex = 16;
             this.ButtonCancel.Text = "Cancelar";
             this.ButtonCancel.UseVisualStyleBackColor = false;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // PanelMoney
             // 
             this.PanelMoney.AutoScroll = true;
             this.PanelMoney.Controls.Add(this.LabelTotalMoney);
-            this.PanelMoney.Controls.Add(this.LabelSubTotalMoney);
             this.PanelMoney.Location = new System.Drawing.Point(90, 558);
             this.PanelMoney.Name = "PanelMoney";
             this.PanelMoney.Size = new System.Drawing.Size(208, 83);
@@ -117,16 +115,6 @@ namespace PresentationLayer.FormsInventoryManager
             this.LabelTotalMoney.TabIndex = 0;
             this.LabelTotalMoney.Text = "$0.00";
             // 
-            // LabelSubTotalMoney
-            // 
-            this.LabelSubTotalMoney.AutoSize = true;
-            this.LabelSubTotalMoney.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSubTotalMoney.Location = new System.Drawing.Point(3, 9);
-            this.LabelSubTotalMoney.Name = "LabelSubTotalMoney";
-            this.LabelSubTotalMoney.Size = new System.Drawing.Size(54, 22);
-            this.LabelSubTotalMoney.TabIndex = 0;
-            this.LabelSubTotalMoney.Text = "$0.00";
-            // 
             // LabelTotalText
             // 
             this.LabelTotalText.AutoSize = true;
@@ -136,16 +124,6 @@ namespace PresentationLayer.FormsInventoryManager
             this.LabelTotalText.Size = new System.Drawing.Size(52, 22);
             this.LabelTotalText.TabIndex = 0;
             this.LabelTotalText.Text = "Total:";
-            // 
-            // LabelSubtotalText
-            // 
-            this.LabelSubtotalText.AutoSize = true;
-            this.LabelSubtotalText.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelSubtotalText.Location = new System.Drawing.Point(6, 567);
-            this.LabelSubtotalText.Name = "LabelSubtotalText";
-            this.LabelSubtotalText.Size = new System.Drawing.Size(78, 22);
-            this.LabelSubtotalText.TabIndex = 0;
-            this.LabelSubtotalText.Text = "Subtotal:";
             // 
             // ButtonBill
             // 
@@ -160,6 +138,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonBill.TabIndex = 14;
             this.ButtonBill.Text = "Facturar";
             this.ButtonBill.UseVisualStyleBackColor = false;
+            this.ButtonBill.Click += new System.EventHandler(this.ButtonBill_Click);
             // 
             // ButtonClearAll
             // 
@@ -174,6 +153,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonClearAll.TabIndex = 14;
             this.ButtonClearAll.Text = "Quitar Todo";
             this.ButtonClearAll.UseVisualStyleBackColor = false;
+            this.ButtonClearAll.Click += new System.EventHandler(this.ButtonClearAll_Click);
             // 
             // ButtonClearOne
             // 
@@ -188,96 +168,112 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonClearOne.TabIndex = 14;
             this.ButtonClearOne.Text = "Quitar";
             this.ButtonClearOne.UseVisualStyleBackColor = false;
+            this.ButtonClearOne.Click += new System.EventHandler(this.ButtonClearOne_Click);
             // 
-            // DataGridViewCar
+            // DataGridViewBill
             // 
-            this.DataGridViewCar.AllowCustomTheming = false;
-            this.DataGridViewCar.AllowUserToAddRows = false;
-            this.DataGridViewCar.AllowUserToDeleteRows = false;
-            this.DataGridViewCar.AllowUserToResizeColumns = false;
-            this.DataGridViewCar.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewCar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridViewCar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridViewCar.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.DataGridViewCar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewCar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGridViewCar.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.DataGridViewCar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewCar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridViewCar.ColumnHeadersHeight = 40;
-            this.DataGridViewCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Product,
-            this.Price,
-            this.Quantity});
-            this.DataGridViewCar.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
-            this.DataGridViewCar.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewCar.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewCar.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
-            this.DataGridViewCar.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewCar.CurrentTheme.BackColor = System.Drawing.Color.ForestGreen;
-            this.DataGridViewCar.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
-            this.DataGridViewCar.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.ForestGreen;
-            this.DataGridViewCar.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewCar.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridViewCar.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
-            this.DataGridViewCar.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridViewCar.CurrentTheme.Name = null;
-            this.DataGridViewCar.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(231)))), ((int)(((byte)(210)))));
-            this.DataGridViewCar.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.DataGridViewCar.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.DataGridViewCar.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
-            this.DataGridViewCar.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(231)))), ((int)(((byte)(210)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewCar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridViewCar.EnableHeadersVisualStyles = false;
-            this.DataGridViewCar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
-            this.DataGridViewCar.HeaderBackColor = System.Drawing.Color.ForestGreen;
-            this.DataGridViewCar.HeaderBgColor = System.Drawing.Color.Empty;
-            this.DataGridViewCar.HeaderForeColor = System.Drawing.Color.White;
-            this.DataGridViewCar.Location = new System.Drawing.Point(10, 58);
-            this.DataGridViewCar.MultiSelect = false;
-            this.DataGridViewCar.Name = "DataGridViewCar";
-            this.DataGridViewCar.ReadOnly = true;
-            this.DataGridViewCar.RowHeadersVisible = false;
-            this.DataGridViewCar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            this.DataGridViewCar.RowTemplate.Height = 40;
-            this.DataGridViewCar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewCar.Size = new System.Drawing.Size(288, 494);
-            this.DataGridViewCar.TabIndex = 13;
-            this.DataGridViewCar.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.ForestGreen;
+            this.DataGridViewBill.AllowCustomTheming = false;
+            this.DataGridViewBill.AllowUserToAddRows = false;
+            this.DataGridViewBill.AllowUserToDeleteRows = false;
+            this.DataGridViewBill.AllowUserToResizeColumns = false;
+            this.DataGridViewBill.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.DataGridViewBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridViewBill.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.DataGridViewBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataGridViewBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DataGridViewBill.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.DataGridViewBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.DataGridViewBill.ColumnHeadersHeight = 40;
+            this.DataGridViewBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Item,
+            this.QTY,
+            this.Precio,
+            this.ID});
+            this.DataGridViewBill.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
+            this.DataGridViewBill.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewBill.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewBill.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
+            this.DataGridViewBill.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewBill.CurrentTheme.BackColor = System.Drawing.Color.ForestGreen;
+            this.DataGridViewBill.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
+            this.DataGridViewBill.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.ForestGreen;
+            this.DataGridViewBill.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewBill.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DataGridViewBill.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
+            this.DataGridViewBill.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridViewBill.CurrentTheme.Name = null;
+            this.DataGridViewBill.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(231)))), ((int)(((byte)(210)))));
+            this.DataGridViewBill.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.DataGridViewBill.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGridViewBill.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
+            this.DataGridViewBill.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(231)))), ((int)(((byte)(210)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewBill.DefaultCellStyle = dataGridViewCellStyle9;
+            this.DataGridViewBill.EnableHeadersVisualStyles = false;
+            this.DataGridViewBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
+            this.DataGridViewBill.HeaderBackColor = System.Drawing.Color.ForestGreen;
+            this.DataGridViewBill.HeaderBgColor = System.Drawing.Color.Empty;
+            this.DataGridViewBill.HeaderForeColor = System.Drawing.Color.White;
+            this.DataGridViewBill.Location = new System.Drawing.Point(10, 58);
+            this.DataGridViewBill.MultiSelect = false;
+            this.DataGridViewBill.Name = "DataGridViewBill";
+            this.DataGridViewBill.ReadOnly = true;
+            this.DataGridViewBill.RowHeadersVisible = false;
+            this.DataGridViewBill.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.DataGridViewBill.RowTemplate.Height = 40;
+            this.DataGridViewBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridViewBill.Size = new System.Drawing.Size(385, 494);
+            this.DataGridViewBill.TabIndex = 13;
+            this.DataGridViewBill.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.ForestGreen;
             // 
-            // Product
+            // Item
             // 
-            this.Product.HeaderText = "Producto";
-            this.Product.Name = "Product";
-            this.Product.ReadOnly = true;
+            this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Item.Frozen = true;
+            this.Item.HeaderText = "Item";
+            this.Item.Name = "Item";
+            this.Item.ReadOnly = true;
             // 
-            // Price
+            // QTY
             // 
-            this.Price.HeaderText = "Precio";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.QTY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.QTY.Frozen = true;
+            this.QTY.HeaderText = "QTY";
+            this.QTY.Name = "QTY";
+            this.QTY.ReadOnly = true;
             // 
-            // Quantity
+            // Precio
             // 
-            this.Quantity.HeaderText = "Cant";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
+            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Precio.Frozen = true;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 5F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // PanelTop
             // 
@@ -306,6 +302,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.TextBoxSearch.Name = "TextBoxSearch";
             this.TextBoxSearch.Size = new System.Drawing.Size(310, 31);
             this.TextBoxSearch.TabIndex = 21;
+            this.TextBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxSearch_KeyDown);
             // 
             // ImageButtonToys
             // 
@@ -337,6 +334,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonToys.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonToys.TabIndex = 20;
             this.ImageButtonToys.ToolTipText = "";
+            this.ImageButtonToys.Visible = false;
             this.ImageButtonToys.WaitOnLoad = false;
             this.ImageButtonToys.Zoom = 0;
             this.ImageButtonToys.ZoomSpeed = 10;
@@ -371,6 +369,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonAccessories.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonAccessories.TabIndex = 18;
             this.ImageButtonAccessories.ToolTipText = "";
+            this.ImageButtonAccessories.Visible = false;
             this.ImageButtonAccessories.WaitOnLoad = false;
             this.ImageButtonAccessories.Zoom = 0;
             this.ImageButtonAccessories.ZoomSpeed = 10;
@@ -405,6 +404,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonFood.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonFood.TabIndex = 19;
             this.ImageButtonFood.ToolTipText = "";
+            this.ImageButtonFood.Visible = false;
             this.ImageButtonFood.WaitOnLoad = false;
             this.ImageButtonFood.Zoom = 0;
             this.ImageButtonFood.ZoomSpeed = 10;
@@ -439,6 +439,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonRabbit.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonRabbit.TabIndex = 16;
             this.ImageButtonRabbit.ToolTipText = "";
+            this.ImageButtonRabbit.Visible = false;
             this.ImageButtonRabbit.WaitOnLoad = false;
             this.ImageButtonRabbit.Zoom = 0;
             this.ImageButtonRabbit.ZoomSpeed = 10;
@@ -473,6 +474,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonBird.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonBird.TabIndex = 17;
             this.ImageButtonBird.ToolTipText = "";
+            this.ImageButtonBird.Visible = false;
             this.ImageButtonBird.WaitOnLoad = false;
             this.ImageButtonBird.Zoom = 0;
             this.ImageButtonBird.ZoomSpeed = 10;
@@ -507,6 +509,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonCats.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonCats.TabIndex = 15;
             this.ImageButtonCats.ToolTipText = "";
+            this.ImageButtonCats.Visible = false;
             this.ImageButtonCats.WaitOnLoad = false;
             this.ImageButtonCats.Zoom = 0;
             this.ImageButtonCats.ZoomSpeed = 10;
@@ -541,6 +544,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonDogs.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonDogs.TabIndex = 14;
             this.ImageButtonDogs.ToolTipText = "";
+            this.ImageButtonDogs.Visible = false;
             this.ImageButtonDogs.WaitOnLoad = false;
             this.ImageButtonDogs.Zoom = 0;
             this.ImageButtonDogs.ZoomSpeed = 10;
@@ -575,6 +579,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ImageButtonAll.Size = new System.Drawing.Size(40, 40);
             this.ImageButtonAll.TabIndex = 13;
             this.ImageButtonAll.ToolTipText = "";
+            this.ImageButtonAll.Visible = false;
             this.ImageButtonAll.WaitOnLoad = false;
             this.ImageButtonAll.Zoom = 0;
             this.ImageButtonAll.ZoomSpeed = 10;
@@ -619,7 +624,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.PanelSide.PerformLayout();
             this.PanelMoney.ResumeLayout(false);
             this.PanelMoney.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewBill)).EndInit();
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSearch)).EndInit();
@@ -644,16 +649,15 @@ namespace PresentationLayer.FormsInventoryManager
         private System.Windows.Forms.PictureBox PictureBoxSearch;
         private System.Windows.Forms.Panel PanelMoney;
         private System.Windows.Forms.Label LabelTotalMoney;
-        private System.Windows.Forms.Label LabelSubTotalMoney;
         private System.Windows.Forms.Label LabelTotalText;
-        private System.Windows.Forms.Label LabelSubtotalText;
         private System.Windows.Forms.Button ButtonBill;
         private System.Windows.Forms.Button ButtonClearAll;
         private System.Windows.Forms.Button ButtonClearOne;
-        private Bunifu.UI.WinForms.BunifuDataGridView DataGridViewCar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private Bunifu.UI.WinForms.BunifuDataGridView DataGridViewBill;
         private System.Windows.Forms.Button ButtonCancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QTY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

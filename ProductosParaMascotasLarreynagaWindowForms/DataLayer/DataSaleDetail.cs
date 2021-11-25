@@ -15,8 +15,8 @@ namespace DataLayer
         public DataTable Select(string search, EntitySaleDetailAttribute attribute, EntityOrderType orderType)
         {
             var data = new DataTable("Detalle Venta");
-            try
-            {
+            //try
+            //{
                 using (SqlConnection connection = new SqlConnection(DataConnection.ConnectionString))
                 {
                     string commandText = null;
@@ -50,11 +50,11 @@ namespace DataLayer
                     command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
                     new SqlDataAdapter(command).Fill(data);
                 }
-            }
-            catch
-            {
-                return data;
-            }
+            //}
+            //catch
+            //{
+            //    return data;
+            //}
             return data;
         }
 
@@ -62,8 +62,8 @@ namespace DataLayer
         {
             var rowsAffected = 0;
 
-            try
-            {
+            //try
+            //{
                 using (var connection = new SqlConnection(DataConnection.ConnectionString))
                 {
                     var command = new SqlCommand()
@@ -79,11 +79,11 @@ namespace DataLayer
                     command.Parameters.Add("@Quantity", SqlDbType.Int).Value = entity.Quantity;
                     rowsAffected = command.ExecuteNonQuery();
                 }
-            }
-            catch
-            {
-                return rowsAffected;
-            }
+            //}
+            //catch
+            //{
+            //    return rowsAffected;
+            //}
             return rowsAffected;
         }
 

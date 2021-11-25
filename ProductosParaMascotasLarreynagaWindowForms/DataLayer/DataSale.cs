@@ -23,6 +23,7 @@ namespace DataLayer
                     switch (attribute)
                     {
                         case EntitySaleAttribute.SaleId:
+                            commandText = "sp_search_sale_by_id";
                             break;
                         case EntitySaleAttribute.CustomerId:
                             break;
@@ -62,8 +63,8 @@ namespace DataLayer
         {
             var rowsAffected = 0;
 
-            try
-            {
+            //try
+            //{
                 using (var connection = new SqlConnection(DataConnection.ConnectionString))
                 {
                     var command = new SqlCommand()
@@ -75,14 +76,14 @@ namespace DataLayer
                     connection.Open();
                     command.Parameters.Add("@CustomerId", SqlDbType.Int).Value = entity.CustomerId;
                     command.Parameters.Add("@EmployeeId", SqlDbType.Int).Value = entity.EmployeeId;
-                    command.Parameters.Add("@Date", SqlDbType.VarChar, 30).Value = entity.Date;
+                    command.Parameters.Add("@Date", SqlDbType.DateTime, 30).Value = entity.Date;
                     rowsAffected = command.ExecuteNonQuery();
                 }
-            }
-            catch
-            {
-                return rowsAffected;
-            }
+            //}
+            //catch
+            //{
+            //    return rowsAffected;
+            //}
             return rowsAffected;
         }
 
@@ -103,7 +104,7 @@ namespace DataLayer
                     command.Parameters.Add("@SaleId", SqlDbType.Int).Value = entity.SaleId;
                     command.Parameters.Add("@CustomerId", SqlDbType.Int).Value = entity.CustomerId;
                     command.Parameters.Add("@EmployeeId", SqlDbType.Int).Value = entity.EmployeeId;
-                    command.Parameters.Add("@Date", SqlDbType.VarChar, 30).Value = entity.Date;
+                    command.Parameters.Add("@Date", SqlDbType.DateTime, 30).Value = entity.Date;
                     rowsAffected = command.ExecuteNonQuery();
                 }
             }
@@ -137,6 +138,32 @@ namespace DataLayer
                 return rowsAffected;
             }
             return rowsAffected;
+        }
+
+        public int LastIdentity()
+        {
+            var identity = 0;
+            try
+            {
+                using (var connection = new SqlConnection(DataConnection.ConnectionString))
+                {
+                    var command = new SqlCommand()
+                    {
+                        CommandType = CommandType.StoredProcedure,
+                        CommandText = "sp_last_identity_sales",
+                        Connection = connection
+                    };
+                    connection.Open();
+                    var data = new DataTable();
+                    new SqlDataAdapter(command).Fill(data);
+                    identity = Convert.ToInt32(data.Rows[0][0]);
+                } 
+            }
+            catch
+            {
+                return identity;
+            }
+            return identity;
         }
     }
 }

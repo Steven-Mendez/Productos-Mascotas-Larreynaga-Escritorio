@@ -29,12 +29,14 @@ namespace PresentationLayer.FormsInventoryManager
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LabelName = new System.Windows.Forms.Label();
             this.LabelPrice = new System.Windows.Forms.Label();
             this.ButtonDetails = new System.Windows.Forms.Button();
+            this.ButtonAdd = new System.Windows.Forms.Button();
             this.PictureBoxProduct = new System.Windows.Forms.PictureBox();
             this.PictureBoxCardView = new System.Windows.Forms.PictureBox();
-            this.ButtonAdd = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxCardView)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +75,20 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonDetails.TabIndex = 3;
             this.ButtonDetails.Text = "Detalles";
             this.ButtonDetails.UseVisualStyleBackColor = false;
+            this.ButtonDetails.Click += new System.EventHandler(this.ButtonDetails_Click);
+            // 
+            // ButtonAdd
+            // 
+            this.ButtonAdd.BackColor = System.Drawing.Color.White;
+            this.ButtonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAdd.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAdd.Location = new System.Drawing.Point(10, 181);
+            this.ButtonAdd.Name = "ButtonAdd";
+            this.ButtonAdd.Size = new System.Drawing.Size(147, 37);
+            this.ButtonAdd.TabIndex = 3;
+            this.ButtonAdd.Text = "Agregar";
+            this.ButtonAdd.UseVisualStyleBackColor = false;
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // PictureBoxProduct
             // 
@@ -95,18 +111,6 @@ namespace PresentationLayer.FormsInventoryManager
             this.PictureBoxCardView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxCardView.TabIndex = 4;
             this.PictureBoxCardView.TabStop = false;
-            // 
-            // ButtonAdd
-            // 
-            this.ButtonAdd.BackColor = System.Drawing.Color.White;
-            this.ButtonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonAdd.Font = new System.Drawing.Font("Mulish", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonAdd.Location = new System.Drawing.Point(10, 181);
-            this.ButtonAdd.Name = "ButtonAdd";
-            this.ButtonAdd.Size = new System.Drawing.Size(147, 37);
-            this.ButtonAdd.TabIndex = 3;
-            this.ButtonAdd.Text = "Agregar";
-            this.ButtonAdd.UseVisualStyleBackColor = false;
             // 
             // ProductButton
             // 
@@ -133,5 +137,6 @@ namespace PresentationLayer.FormsInventoryManager
         private System.Windows.Forms.Button ButtonDetails;
         private System.Windows.Forms.PictureBox PictureBoxCardView;
         private System.Windows.Forms.Button ButtonAdd;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

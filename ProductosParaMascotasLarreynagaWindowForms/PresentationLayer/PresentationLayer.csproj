@@ -164,6 +164,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsInventoryManager\FormBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormBill.Designer.cs">
+      <DependentUpon>FormBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsInventoryManager\FormCategoryManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,24 @@
     <Compile Include="FormsInventoryManager\FormPointOfSale.Designer.cs">
       <DependentUpon>FormPointOfSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsInventoryManager\FormProductDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormProductDetail.Designer.cs">
+      <DependentUpon>FormProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormSelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormSelectCustomer.Designer.cs">
+      <DependentUpon>FormSelectCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormSelectEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormSelectEmployee.Designer.cs">
+      <DependentUpon>FormSelectEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsInventoryManager\ProductButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,6 +247,9 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormBill.resx">
+      <DependentUpon>FormBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormCategoryManager.resx">
       <DependentUpon>FormCategoryManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +264,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormPointOfSale.resx">
       <DependentUpon>FormPointOfSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormProductDetail.resx">
+      <DependentUpon>FormProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormSelectCustomer.resx">
+      <DependentUpon>FormSelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormSelectEmployee.resx">
+      <DependentUpon>FormSelectEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\ProductButton.resx">
       <DependentUpon>ProductButton.cs</DependentUpon>

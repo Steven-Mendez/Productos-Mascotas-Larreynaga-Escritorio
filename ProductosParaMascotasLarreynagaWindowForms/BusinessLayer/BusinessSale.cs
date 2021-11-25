@@ -33,5 +33,10 @@ namespace BusinessLayer
         {
             return _data.Delete(entity);
         }
+
+        public int LastIdentity()
+        {
+            return _data.LastIdentity();
+        }
     }
 }
