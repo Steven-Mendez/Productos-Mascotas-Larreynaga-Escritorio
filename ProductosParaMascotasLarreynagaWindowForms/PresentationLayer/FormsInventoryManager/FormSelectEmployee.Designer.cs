@@ -66,6 +66,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonAdd.TabIndex = 25;
             this.ButtonAdd.Text = "Agregar";
             this.ButtonAdd.UseVisualStyleBackColor = false;
+            this.ButtonAdd.Visible = false;
             // 
             // ButtonSelect
             // 
