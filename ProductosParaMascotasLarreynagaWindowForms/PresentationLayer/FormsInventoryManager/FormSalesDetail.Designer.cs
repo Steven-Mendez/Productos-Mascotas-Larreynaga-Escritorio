@@ -1,7 +1,7 @@
 ﻿
 namespace PresentationLayer.FormsInventoryManager
 {
-    partial class FormSales
+    partial class FormSalesDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,11 @@ namespace PresentationLayer.FormsInventoryManager
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSales));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DG = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.TextBoxSearch = new System.Windows.Forms.TextBox();
-            this.PictureBoxSearch = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // DG
@@ -47,23 +43,23 @@ namespace PresentationLayer.FormsInventoryManager
             this.DG.AllowUserToDeleteRows = false;
             this.DG.AllowUserToResizeColumns = false;
             this.DG.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.DG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.DG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.DG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DG.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(193)))));
             this.DG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DG.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DG.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.DG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(111)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.DG.ColumnHeadersHeight = 40;
             this.DG.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(226)))), ((int)(((byte)(199)))));
             this.DG.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -83,20 +79,20 @@ namespace PresentationLayer.FormsInventoryManager
             this.DG.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.DG.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
             this.DG.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(231)))), ((int)(((byte)(210)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(231)))), ((int)(((byte)(210)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(185)))), ((int)(((byte)(122)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG.DefaultCellStyle = dataGridViewCellStyle12;
             this.DG.EnableHeadersVisualStyles = false;
             this.DG.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(220)))), ((int)(((byte)(188)))));
             this.DG.HeaderBackColor = System.Drawing.Color.ForestGreen;
             this.DG.HeaderBgColor = System.Drawing.Color.Empty;
             this.DG.HeaderForeColor = System.Drawing.Color.White;
-            this.DG.Location = new System.Drawing.Point(7, 61);
+            this.DG.Location = new System.Drawing.Point(12, 12);
             this.DG.MultiSelect = false;
             this.DG.Name = "DG";
             this.DG.ReadOnly = true;
@@ -104,59 +100,31 @@ namespace PresentationLayer.FormsInventoryManager
             this.DG.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.DG.RowTemplate.Height = 40;
             this.DG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DG.Size = new System.Drawing.Size(1048, 635);
-            this.DG.TabIndex = 21;
+            this.DG.Size = new System.Drawing.Size(776, 426);
+            this.DG.TabIndex = 22;
             this.DG.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.ForestGreen;
-            this.DG.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_CellDoubleClick);
             // 
-            // TextBoxSearch
+            // FormSalesDetail
             // 
-            this.TextBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextBoxSearch.Font = new System.Drawing.Font("Mulish", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(193)))));
-            this.TextBoxSearch.Location = new System.Drawing.Point(41, 18);
-            this.TextBoxSearch.Name = "TextBoxSearch";
-            this.TextBoxSearch.Size = new System.Drawing.Size(310, 31);
-            this.TextBoxSearch.TabIndex = 20;
-            this.TextBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxSearch_KeyDown);
-            // 
-            // PictureBoxSearch
-            // 
-            this.PictureBoxSearch.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxSearch.Image")));
-            this.PictureBoxSearch.Location = new System.Drawing.Point(7, 11);
-            this.PictureBoxSearch.Name = "PictureBoxSearch";
-            this.PictureBoxSearch.Size = new System.Drawing.Size(350, 44);
-            this.PictureBoxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PictureBoxSearch.TabIndex = 19;
-            this.PictureBoxSearch.TabStop = false;
-            // 
-            // FormSales
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(205)))), ((int)(((byte)(193)))));
-            this.ClientSize = new System.Drawing.Size(1062, 706);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DG);
-            this.Controls.Add(this.TextBoxSearch);
-            this.Controls.Add(this.PictureBoxSearch);
-            this.Font = new System.Drawing.Font("Mulish", 8.25F);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(31)))), ((int)(((byte)(25)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormSales";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormSalesDetail";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "FormSales";
-            this.Load += new System.EventHandler(this.FormSales_Load);
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.FormSalesDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSearch)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.UI.WinForms.BunifuDataGridView DG;
-        private System.Windows.Forms.TextBox TextBoxSearch;
-        private System.Windows.Forms.PictureBox PictureBoxSearch;
     }
 }

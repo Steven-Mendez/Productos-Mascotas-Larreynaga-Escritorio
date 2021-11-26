@@ -296,6 +296,12 @@
     <Compile Include="FormsInventoryManager\FormSales.Designer.cs">
       <DependentUpon>FormSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsInventoryManager\FormSalesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormSalesDetail.Designer.cs">
+      <DependentUpon>FormSalesDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsInventoryManager\FormSelectCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormSales.resx">
       <DependentUpon>FormSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormSalesDetail.resx">
+      <DependentUpon>FormSalesDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormSelectCustomer.resx">
       <DependentUpon>FormSelectCustomer.cs</DependentUpon>

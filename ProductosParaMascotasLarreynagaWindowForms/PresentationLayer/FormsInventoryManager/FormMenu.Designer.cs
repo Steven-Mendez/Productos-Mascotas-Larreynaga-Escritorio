@@ -66,7 +66,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonEmployees.Font = new System.Drawing.Font("Mulish Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonEmployees.Image = global::PresentationLayer.InventoryManager.employee_group_gray;
             this.ButtonEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonEmployees.Location = new System.Drawing.Point(0, 328);
+            this.ButtonEmployees.Location = new System.Drawing.Point(0, 246);
             this.ButtonEmployees.Name = "ButtonEmployees";
             this.ButtonEmployees.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ButtonEmployees.Size = new System.Drawing.Size(304, 82);
@@ -86,7 +86,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonClients.Font = new System.Drawing.Font("Mulish Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonClients.Image = global::PresentationLayer.InventoryManager.people_community_gray;
             this.ButtonClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonClients.Location = new System.Drawing.Point(0, 246);
+            this.ButtonClients.Location = new System.Drawing.Point(0, 164);
             this.ButtonClients.Name = "ButtonClients";
             this.ButtonClients.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ButtonClients.Size = new System.Drawing.Size(304, 82);
@@ -106,7 +106,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonSuppliers.Font = new System.Drawing.Font("Mulish Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSuppliers.Image = global::PresentationLayer.InventoryManager.fluent_person_support_gray;
             this.ButtonSuppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSuppliers.Location = new System.Drawing.Point(0, 164);
+            this.ButtonSuppliers.Location = new System.Drawing.Point(0, 328);
             this.ButtonSuppliers.Name = "ButtonSuppliers";
             this.ButtonSuppliers.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ButtonSuppliers.Size = new System.Drawing.Size(304, 82);
@@ -126,7 +126,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonPointOfSale.Font = new System.Drawing.Font("Mulish Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonPointOfSale.Image = global::PresentationLayer.InventoryManager.point_of_sale_gray;
             this.ButtonPointOfSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonPointOfSale.Location = new System.Drawing.Point(0, 82);
+            this.ButtonPointOfSale.Location = new System.Drawing.Point(0, 0);
             this.ButtonPointOfSale.Name = "ButtonPointOfSale";
             this.ButtonPointOfSale.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ButtonPointOfSale.Size = new System.Drawing.Size(304, 82);
@@ -146,7 +146,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonInventoryManager.Font = new System.Drawing.Font("Mulish Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonInventoryManager.Image = global::PresentationLayer.InventoryManager.box_icon_invertoy_manager_gray;
             this.ButtonInventoryManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonInventoryManager.Location = new System.Drawing.Point(0, 0);
+            this.ButtonInventoryManager.Location = new System.Drawing.Point(0, 82);
             this.ButtonInventoryManager.Name = "ButtonInventoryManager";
             this.ButtonInventoryManager.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ButtonInventoryManager.Size = new System.Drawing.Size(304, 82);
@@ -164,11 +164,11 @@ namespace PresentationLayer.FormsInventoryManager
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(31)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(304, 613);
             this.Controls.Add(this.ButtonSales);
+            this.Controls.Add(this.ButtonSuppliers);
             this.Controls.Add(this.ButtonEmployees);
             this.Controls.Add(this.ButtonClients);
-            this.Controls.Add(this.ButtonSuppliers);
-            this.Controls.Add(this.ButtonPointOfSale);
             this.Controls.Add(this.ButtonInventoryManager);
+            this.Controls.Add(this.ButtonPointOfSale);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(205)))), ((int)(((byte)(225)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMenu";

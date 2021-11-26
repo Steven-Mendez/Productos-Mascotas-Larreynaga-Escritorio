@@ -19,8 +19,8 @@ namespace PresentationLayer.FormsInventoryManager
         public FormMenu(Panel mainContainer)
         {
             InitializeComponent();
-            _buttons.Add((ButtonInventoryManager, InventoryManager.box_icon_invertoy_manager, InventoryManager.box_icon_invertoy_manager_gray));
             _buttons.Add((ButtonPointOfSale, InventoryManager.point_of_sale_white, InventoryManager.point_of_sale_gray));
+            _buttons.Add((ButtonInventoryManager, InventoryManager.box_icon_invertoy_manager, InventoryManager.box_icon_invertoy_manager_gray));
             _buttons.Add((ButtonSuppliers, InventoryManager.fluent_person_support_white, InventoryManager.fluent_person_support_gray));
             _buttons.Add((ButtonClients, InventoryManager.people_community_white, InventoryManager.people_community_gray));
             _buttons.Add((ButtonEmployees, InventoryManager.employee_group_white, InventoryManager.employee_group_gray));
@@ -47,27 +47,27 @@ namespace PresentationLayer.FormsInventoryManager
 
         private void ButtonSuppliers_Click(object sender, EventArgs e)
         {
-            //_openFormInPanel(new FormInventoryManagement(), _mainContainer);
             _paintSelectedButton((Button)sender);
+            //_openFormInPanel(new FormInventoryManagement(), _mainContainer);
         }
 
         private void ButtonClients_Click(object sender, EventArgs e)
         {
-            _openFormInPanel(new FormClients(), _mainContainer);
             _paintSelectedButton((Button)sender);
+            _openFormInPanel(new FormClients(), _mainContainer);
         }
 
 
         private void ButtonEmployees_Click(object sender, EventArgs e)
         {
-            _openFormInPanel(new FormEmployees(), _mainContainer);
             _paintSelectedButton((Button)sender);
+            _openFormInPanel(new FormEmployees(), _mainContainer);
         }
 
         private void ButtonSales_Click(object sender, EventArgs e)
         {
-            _openFormInPanel(new FormSales(), _mainContainer);
             _paintSelectedButton((Button)sender);
+            _openFormInPanel(new FormSales(), _mainContainer);
         }
 
         private void _paintSelectedButton(Button sender)
