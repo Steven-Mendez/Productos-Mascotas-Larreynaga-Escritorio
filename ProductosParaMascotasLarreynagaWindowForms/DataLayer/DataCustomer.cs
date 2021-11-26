@@ -154,5 +154,32 @@ namespace DataLayer
             }
             return rowsAffected;
         }
+
+        public DataTable SelectEngine(string search)
+        {
+            var data = new DataTable("Cliente");
+            try
+            {
+                using (var connection = new SqlConnection(DataConnection.ConnectionString))
+                {
+                    string commandText = "sp_select_customer";
+                    var command = new SqlCommand()
+                    {
+                        CommandType = CommandType.StoredProcedure,
+                        CommandText = commandText,
+                        Connection = connection
+                    };
+                    connection.Open();
+                    command.Parameters.Add("@search", SqlDbType.NVarChar, 1000).Value = search;
+                    var adapter = new SqlDataAdapter(command);
+                    adapter.Fill(data);
+                }
+            }
+            catch
+            {
+                return data;
+            }
+            return data;
+        }
     }
 }

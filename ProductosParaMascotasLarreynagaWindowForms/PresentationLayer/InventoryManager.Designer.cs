@@ -133,6 +133,26 @@ namespace PresentationLayer {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carbon_add_filled {
+            get {
+                object obj = ResourceManager.GetObject("carbon_add-filled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clarity_note_edit_solid {
+            get {
+                object obj = ResourceManager.GetObject("clarity_note-edit-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap combis_adulto_mejor_alimento_ {
             get {
                 object obj = ResourceManager.GetObject("combis_adulto_mejor_alimento_", resourceCulture);
@@ -176,6 +196,16 @@ namespace PresentationLayer {
         internal static System.Drawing.Bitmap employee_group_white {
             get {
                 object obj = ResourceManager.GetObject("employee_group_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fluent_delete_20_filled {
+            get {
+                object obj = ResourceManager.GetObject("fluent_delete-20-filled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -786,6 +816,16 @@ namespace PresentationLayer {
         internal static System.Drawing.Bitmap search_inventory_managment_category1 {
             get {
                 object obj = ResourceManager.GetObject("search_inventory_managment_category1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vector {
+            get {
+                object obj = ResourceManager.GetObject("Vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

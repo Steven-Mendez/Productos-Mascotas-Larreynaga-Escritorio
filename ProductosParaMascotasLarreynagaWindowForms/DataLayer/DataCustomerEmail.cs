@@ -25,6 +25,7 @@ namespace DataLayer
                         case EntityCustomerEmailAttribute.EmailId:
                             break;
                         case EntityCustomerEmailAttribute.CustomerId:
+                            commandText = "sp_search_customer_email_by_customer_id";
                             break;
                         case EntityCustomerEmailAttribute.Email:
                             break;

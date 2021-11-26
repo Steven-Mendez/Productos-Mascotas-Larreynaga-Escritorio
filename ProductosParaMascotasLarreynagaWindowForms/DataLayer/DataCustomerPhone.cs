@@ -25,6 +25,7 @@ namespace DataLayer
                         case EntityCustomerPhoneAttribute.PhoneId:
                             break;
                         case EntityCustomerPhoneAttribute.CustomerId:
+                            commandText = "sp_search_customer_phone_by_customer_id";
                             break;
                         case EntityCustomerPhoneAttribute.Number:
                             break;

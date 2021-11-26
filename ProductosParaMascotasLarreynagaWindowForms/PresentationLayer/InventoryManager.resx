@@ -157,6 +157,9 @@
   <data name="inventory_management_add_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_add_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fluent_delete-20-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\fluent_delete-20-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Conejo_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Conejo_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,6 +168,9 @@
   </data>
   <data name="inventory_managment_folder_delete_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_managment_folder_delete_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clarity_note-edit-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\clarity_note-edit-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="all" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\all.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +186,12 @@
   </data>
   <data name="inventory_management_sort_ascending_ebony" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_sort_ascending_ebony.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventory_management_description" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\inventory_management_description.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventory_management_sort_descending_sage_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\inventory_management_sort_descending_sage_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_inventory_managment_category" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\search_inventory_managment_category.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,6 +235,9 @@
   <data name="inventory_managment_folder_open_filled_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_managment_folder_open_filled_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="inventory_management_categories" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_categories.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -235,8 +250,8 @@
   <data name="monetization_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\monetization_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inventory_management_sort_descending_sage_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\inventory_management_sort_descending_sage_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fluent_person_support_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\fluent_person_support_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="employee_group_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\employee_group_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -252,9 +267,6 @@
   </data>
   <data name="inventory_management_edit_ebony" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_edit_ebony.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fluent_person_support_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\fluent_person_support_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inventory_management_bag_fill_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_bag_fill_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,8 +328,8 @@
   <data name="inventory_management_description_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_management_description_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inventory_management_description" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\inventory_management_description.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="product_card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\product_card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_inventory_managment_category1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\search_inventory_managment_category1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,7 +346,7 @@
   <data name="inventory_managment_folder_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\inventory_managment_folder_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="product_card1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\product_card1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="carbon_add-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\carbon_add-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

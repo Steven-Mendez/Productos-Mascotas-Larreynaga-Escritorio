@@ -42,27 +42,31 @@ namespace PresentationLayer.FormsInventoryManager
         private void ButtonPointOfSale_Click(object sender, EventArgs e)
         {
             _openFormInPanel(new FormPointOfSale(), _mainContainer);
-
             _paintSelectedButton((Button)sender);
         }
 
         private void ButtonSuppliers_Click(object sender, EventArgs e)
         {
+            //_openFormInPanel(new FormInventoryManagement(), _mainContainer);
             _paintSelectedButton((Button)sender);
         }
 
         private void ButtonClients_Click(object sender, EventArgs e)
         {
+            _openFormInPanel(new FormClients(), _mainContainer);
             _paintSelectedButton((Button)sender);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void ButtonEmployees_Click(object sender, EventArgs e)
         {
+            _openFormInPanel(new FormEmployees(), _mainContainer);
             _paintSelectedButton((Button)sender);
         }
 
         private void ButtonSales_Click(object sender, EventArgs e)
         {
+            _openFormInPanel(new FormSales(), _mainContainer);
             _paintSelectedButton((Button)sender);
         }
 
@@ -100,5 +104,7 @@ namespace PresentationLayer.FormsInventoryManager
             _activeForm.BringToFront();
             _activeForm.Show();
         }
+
+        
     }
 }

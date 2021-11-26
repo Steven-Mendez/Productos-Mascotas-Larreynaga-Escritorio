@@ -17,7 +17,7 @@ namespace EntityLayer
         public string Identification { get; set; }
         public string Address { get; set; }
         public int StreetNumber { get; set; }
-        public int StreetName { get; set; }
+        public string StreetName { get; set; }
 
         public enum EntityCustomerAttribute
         {

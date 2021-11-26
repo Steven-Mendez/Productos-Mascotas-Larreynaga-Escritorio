@@ -75,7 +75,7 @@ namespace PresentationLayer.FormsInventoryManager
             this.ButtonEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonEmployees.UseVisualStyleBackColor = false;
-            this.ButtonEmployees.Click += new System.EventHandler(this.button1_Click);
+            this.ButtonEmployees.Click += new System.EventHandler(this.ButtonEmployees_Click);
             // 
             // ButtonClients
             // 

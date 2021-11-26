@@ -164,6 +164,42 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsInventoryManager\FormAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddCustomer.Designer.cs">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddCustomerEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddCustomerEmail.Designer.cs">
+      <DependentUpon>FormAddCustomerEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddCustomerPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddCustomerPhone.Designer.cs">
+      <DependentUpon>FormAddCustomerPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddEmployee.Designer.cs">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddEmployeeEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddEmployeeEmail.Designer.cs">
+      <DependentUpon>FormAddEmployeeEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddEmployeePhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormAddEmployeePhone.Designer.cs">
+      <DependentUpon>FormAddEmployeePhone.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsInventoryManager\FormBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +211,54 @@
     </Compile>
     <Compile Include="FormsInventoryManager\FormCategoryManager.Designer.cs">
       <DependentUpon>FormCategoryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormClients.Designer.cs">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditCustomer.Designer.cs">
+      <DependentUpon>FormEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditCustomerEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditCustomerEmail.Designer.cs">
+      <DependentUpon>FormEditCustomerEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditCustomerPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditCustomerPhone.Designer.cs">
+      <DependentUpon>FormEditCustomerPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditEmployee.Designer.cs">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditEmployeeEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditEmployeeEmail.Designer.cs">
+      <DependentUpon>FormEditEmployeeEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditEmployeePhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEditEmployeePhone.Designer.cs">
+      <DependentUpon>FormEditEmployeePhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormEmployees.Designer.cs">
+      <DependentUpon>FormEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsInventoryManager\FormInventoryManagement.cs">
       <SubType>Form</SubType>
@@ -205,6 +289,12 @@
     </Compile>
     <Compile Include="FormsInventoryManager\FormProductDetail.Designer.cs">
       <DependentUpon>FormProductDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsInventoryManager\FormSales.Designer.cs">
+      <DependentUpon>FormSales.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsInventoryManager\FormSelectCustomer.cs">
       <SubType>Form</SubType>
@@ -247,11 +337,53 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormAddCustomerEmail.resx">
+      <DependentUpon>FormAddCustomerEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormAddCustomerPhone.resx">
+      <DependentUpon>FormAddCustomerPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormAddEmployee.resx">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormAddEmployeeEmail.resx">
+      <DependentUpon>FormAddEmployeeEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormAddEmployeePhone.resx">
+      <DependentUpon>FormAddEmployeePhone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormBill.resx">
       <DependentUpon>FormBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormCategoryManager.resx">
       <DependentUpon>FormCategoryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormClients.resx">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormEditCustomer.resx">
+      <DependentUpon>FormEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormEditCustomerEmail.resx">
+      <DependentUpon>FormEditCustomerEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormEditCustomerPhone.resx">
+      <DependentUpon>FormEditCustomerPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormEditEmployee.resx">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormEditEmployeeEmail.resx">
+      <DependentUpon>FormEditEmployeeEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormEditEmployeePhone.resx">
+      <DependentUpon>FormEditEmployeePhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormEmployees.resx">
+      <DependentUpon>FormEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormInventoryManagement.resx">
       <DependentUpon>FormInventoryManagement.cs</DependentUpon>
@@ -267,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormProductDetail.resx">
       <DependentUpon>FormProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsInventoryManager\FormSales.resx">
+      <DependentUpon>FormSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsInventoryManager\FormSelectCustomer.resx">
       <DependentUpon>FormSelectCustomer.cs</DependentUpon>
@@ -587,6 +722,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\product_card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clarity_note-edit-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fluent_delete-20-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carbon_add-filled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

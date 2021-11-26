@@ -33,5 +33,10 @@ namespace BusinessLayer
         {
             return _data.Delete(entity);
         }
+
+        public DataTable SelectEngine(string search)
+        {
+            return _data.SelectEngine(search);
+        }
     }
 }
